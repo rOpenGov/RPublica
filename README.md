@@ -15,8 +15,6 @@ The package serves as a client library for the (currently) three [ProPublica](ht
 
 ## Using the package ##
 
-COMING SOON
-
 ### Nonprofit Explorer ###
 
 The [Nonprofit Explorer API](http://projects.propublica.org/nonprofits/api) functionality includes two functions: `npsearch`, to retrieve subsets of available organizations, and `np_org` to retrieve detailed information about a given organization including a direct link to the complete Form 990 for that organization (as a PDF).
