@@ -1,6 +1,6 @@
 # ProPublica API Client #
 
-[![Build Status](https://travis-ci.org/leeper/RPublica.png?branch=master)](https://travis-ci.org/leeper/RPublica)
+[![Build Status](https://travis-ci.org/rOpenGov/RPublica.png?branch=master)](https://travis-ci.org/rOpenGov/RPublica)
 
 The package is released under GPL-2 as part of the [rOpenGov](http://ropengov.github.io/) project. Licenses for the data depend on the particular API, but access to that data (regardless of license) through the APIs is allowed under [ProPublica's Data Terms of Use](http://www.propublica.org/about/propublica-data-terms-of-use).
 
