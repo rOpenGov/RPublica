@@ -10,9 +10,8 @@ np_search <- function(q=NULL, order=NULL, sort=NULL, state=NULL, ntee=NULL, subs
     names(args)[names(args)=='subsection'] <- curlEscape('c_code[id]')
     args <- paste('?', paste(names(args), args, sep='=', collapse='&'), sep='')
     out <- ppQuery('search',
-                   'https://projects.propublica.org/nonprofits/api/v1/', fmt='json', args=args, 
-                   followlocation = 1L, ssl.verifypeer = 1L, ssl.verifyhost = 2L, 
-                   cainfo = system.file("CurlSSL", "cacert.pem", package = "RCurl"), ...)
+                   'https://projects.propublica.org/nonprofits/api/v1/',
+                   fmt='json', args=args, ...)
     return(out)
 }
 
