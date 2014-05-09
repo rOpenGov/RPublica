@@ -19,4 +19,8 @@ systems(id, ...)
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}
-%\examples{}
+\examples{
+\dontrun{geos('ny')}
+
+\dontrun{systems(36)}
+}

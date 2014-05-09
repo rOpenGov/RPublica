@@ -15,4 +15,6 @@ filing(id, ...)
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}
-%\examples{}
+\examples{
+\dontrun{filing(51212)}
+}

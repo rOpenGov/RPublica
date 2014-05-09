@@ -24,4 +24,7 @@ np_org(ein, ...)
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}
-%\examples{}
+\examples{
+\dontrun{np_search('propublica')}
+\dontrun{np_org(142007220)}
+}

@@ -15,4 +15,6 @@ market(slug = NULL, ...)
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}
-%\examples{}
+\examples{
+\dontrun{market('new-york')}
+}

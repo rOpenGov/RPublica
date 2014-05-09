@@ -15,4 +15,6 @@ station(callsign, ...)
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}
-%\examples{}
+\examples{
+\dontrun{station('WEWS-TV')}
+}

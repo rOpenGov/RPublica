@@ -15,4 +15,6 @@ committee(slug = NULL, ...)
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}
-%\examples{}
+\examples{
+\dontrun{committee('obama-for-america')}
+}
