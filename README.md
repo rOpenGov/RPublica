@@ -37,15 +37,97 @@ The [Nonprofit Explorer API](http://projects.propublica.org/nonprofits/api) func
 
 
 ```r
-library("RPublica")
-str(np_search("propublica"), max = 2)
+library('RPublica')
 ```
 
 ```
-## List of 13
-##  $ total_results : num 1
-##  $ filings       :List of 1
-##   ..$ :List of 68
+## 
+## Attaching package: 'RPublica'
+## 
+## The following objects are masked _by_ '.GlobalEnv':
+## 
+##     committee, filing, geos, market, np_org, np_search, ppQuery,
+##     station, systems
+```
+
+```r
+str(np_search('propublica'), max=2)
+```
+
+```
+## List of 14
+##  $ total_results : num 2
+##  $ filings       :'data.frame':	2 obs. of  69 variables:
+##   ..$ tax_prd              : num [1:2] 201212 201112
+##   ..$ tax_prd_yr           : num [1:2] 2012 2011
+##   ..$ formtype             : num [1:2] 0 0
+##   ..$ pdf_url              : chr [1:2] "https://bulk.resource.org/irs.gov/eo/2013_09_EO/14-2007220_990_201212.pdf" "https://bulk.resource.org/irs.gov/eo/2012_08_EO/14-2007220_990_201112.pdf"
+##   ..$ updated              : chr [1:2] "2014-04-30T16:31:12Z" "2013-04-11T16:18:36Z"
+##   ..$ totrevenue           : num [1:2] 10955982 10142780
+##   ..$ totfuncexpns         : num [1:2] 9884450 9651650
+##   ..$ totassetsend         : num [1:2] 4529443 3591151
+##   ..$ totliabend           : num [1:2] 119078 252318
+##   ..$ pct_compnsatncurrofcr: num [1:2] 0 0.161
+##   ..$ tax_pd               : logi [1:2] NA NA
+##   ..$ subseccd             : num [1:2] 3 3
+##   ..$ unrelbusinccd        : chr [1:2] "Y" "Y"
+##   ..$ initiationfees       : num [1:2] 0 0
+##   ..$ grsrcptspublicuse    : num [1:2] 0 0
+##   ..$ grsincmembers        : num [1:2] 0 0
+##   ..$ grsincother          : num [1:2] 0 0
+##   ..$ totcntrbgfts         : num [1:2] 10920019 10115367
+##   ..$ totprgmrevnue        : num [1:2] 0 0
+##   ..$ invstmntinc          : num [1:2] 50 83
+##   ..$ txexmptbndsproceeds  : num [1:2] 0 0
+##   ..$ royaltsinc           : num [1:2] 17096 4547
+##   ..$ grsrntsreal          : num [1:2] 0 0
+##   ..$ grsrntsprsnl         : num [1:2] 0 0
+##   ..$ rntlexpnsreal        : num [1:2] 0 0
+##   ..$ rntlexpnsprsnl       : num [1:2] 0 0
+##   ..$ rntlincreal          : num [1:2] 0 0
+##   ..$ rntlincprsnl         : num [1:2] 0 0
+##   ..$ netrntlinc           : num [1:2] 0 0
+##   ..$ grsalesecur          : num [1:2] 0 0
+##   ..$ grsalesothr          : num [1:2] 0 0
+##   ..$ cstbasisecur         : num [1:2] 0 0
+##   ..$ cstbasisothr         : num [1:2] 0 0
+##   ..$ gnlsecur             : num [1:2] 0 0
+##   ..$ gnlsothr             : num [1:2] 0 0
+##   ..$ netgnls              : num [1:2] 0 0
+##   ..$ grsincfndrsng        : num [1:2] 0 0
+##   ..$ lessdirfndrsng       : num [1:2] 0 0
+##   ..$ netincfndrsng        : num [1:2] 0 0
+##   ..$ grsincgaming         : num [1:2] 0 0
+##   ..$ lessdirgaming        : num [1:2] 0 0
+##   ..$ netincgaming         : num [1:2] 0 0
+##   ..$ grsalesinvent        : num [1:2] 0 0
+##   ..$ lesscstofgoods       : num [1:2] 0 0
+##   ..$ netincsales          : num [1:2] 0 0
+##   ..$ miscrevtot11e        : num [1:2] 18817 22783
+##   ..$ compnsatncurrofcr    : num [1:2] 0 1552988
+##   ..$ othrsalwages         : num [1:2] 0 4522408
+##   ..$ payrolltx            : num [1:2] 0 331237
+##   ..$ profndraising        : num [1:2] 0 0
+##   ..$ txexmptbndsend       : num [1:2] 0 0
+##   ..$ secrdmrtgsend        : num [1:2] 0 0
+##   ..$ unsecurednotesend    : num [1:2] 0 0
+##   ..$ retainedearnend      : num [1:2] 0 0
+##   ..$ totnetassetend       : num [1:2] 4410365 3338833
+##   ..$ nonpfrea             : chr [1:2] "07" "07"
+##   ..$ gftgrntsrcvd170      : num [1:2] 46144525 36669506
+##   ..$ txrevnuelevied170    : num [1:2] 0 0
+##   ..$ srvcsval170          : num [1:2] 0 0
+##   ..$ grsinc170            : num [1:2] 70024 41334
+##   ..$ grsrcptsrelated170   : num [1:2] 0 0
+##   ..$ totgftgrntrcvd509    : num [1:2] 0 0
+##   ..$ grsrcptsadmissn509   : num [1:2] 0 0
+##   ..$ txrevnuelevied509    : num [1:2] 0 0
+##   ..$ srvcsval509          : num [1:2] 0 0
+##   ..$ subtotsuppinc509     : num [1:2] 0 0
+##   ..$ totsupp509           : num [1:2] 0 0
+##   ..$ ein                  : num [1:2] 1.42e+08 1.42e+08
+##   ..$ organization         :'data.frame':	2 obs. of  33 variables:
+##  $ num_pages     : num 1
 ##  $ cur_page      : num 0
 ##  $ page_offset   : num 0
 ##  $ per_page      : num 25
@@ -60,18 +142,17 @@ str(np_search("propublica"), max = 2)
 ```
 
 ```r
-str(np_org(142007220), max = 1)
+str(np_org(142007220), max=1)
 ```
 
 ```
 ## List of 5
 ##  $ organization        :List of 31
-##  $ filings_with_data   :List of 2
-##  $ filings_without_data:List of 4
+##  $ filings_with_data   :'data.frame':	2 obs. of  68 variables:
+##  $ filings_without_data:'data.frame':	4 obs. of  4 variables:
 ##  $ data_source         : chr "ProPublica Nonprofit Explorer API: http://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Business Master Fil"| __truncated__
 ##  $ api_version         : num 1
 ```
-
 
 ### Forensics API ###
 
@@ -79,33 +160,32 @@ The [Forensics API](http://projects.propublica.org/forensics/api) functionality 
 
 
 ```r
-library("RPublica")
+library('RPublica')
 g <- geos()
-str(g[[1]])
+str(g)
 ```
 
 ```
-## List of 1
-##  $ geo:List of 14
-##   ..$ ar_association_key_name: num 1
-##   ..$ cached_slug            : chr "ak"
-##   ..$ coroner_system         : chr "none"
-##   ..$ created_at             : chr "2011-05-04T12:22:11-04:00"
-##   ..$ district               : NULL
-##   ..$ id                     : num 2
-##   ..$ kind                   : chr "state"
-##   ..$ medical_examiner_system: chr "state"
-##   ..$ name                   : chr "Alaska"
-##   ..$ note                   : NULL
-##   ..$ population             : NULL
-##   ..$ postal_abbreviation    : chr "AK"
-##   ..$ updated_at             : chr "2011-05-04T12:25:09-04:00"
-##   ..$ system_types           : Named chr [1:2] "state" "none"
-##   .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
+## 'data.frame':	80 obs. of  15 variables:
+##  $ geo.ar_association_key_name             : num  1 2 3 4 5 6 7 8 9 10 ...
+##  $ geo.cached_slug                         : chr  "ak" "ar" "ct" "de" ...
+##  $ geo.coroner_system                      : chr  "none" "county" "none" "none" ...
+##  $ geo.created_at                          : chr  "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" ...
+##  $ geo.district                            : logi  NA NA NA NA NA NA ...
+##  $ geo.id                                  : num  2 5 9 10 11 21 23 24 25 30 ...
+##  $ geo.kind                                : chr  "state" "state" "state" "state" ...
+##  $ geo.medical_examiner_system             : chr  "state" "state" "state" "state" ...
+##  $ geo.name                                : chr  "Alaska" "Arkansas" "Connecticut" "Delaware" ...
+##  $ geo.note                                : logi  NA NA NA NA NA NA ...
+##  $ geo.population                          : logi  NA NA NA NA NA NA ...
+##  $ geo.postal_abbreviation                 : chr  "AK" "AR" "CT" "DE" ...
+##  $ geo.updated_at                          : chr  "2011-05-04T12:25:09-04:00" "2011-05-04T12:25:09-04:00" "2011-05-04T12:25:09-04:00" "2011-05-04T12:25:09-04:00" ...
+##  $ geo.system_types.medical_examiner_system: chr  "state" "state" "state" "state" ...
+##  $ geo.system_types.coroner_system         : chr  "none" "county" "none" "none" ...
 ```
 
 ```r
-str(geos("ny"))
+str(geos('ny'))
 ```
 
 ```
@@ -123,16 +203,15 @@ str(geos("ny"))
 ##   ..$ population             : NULL
 ##   ..$ postal_abbreviation    : chr "NY"
 ##   ..$ updated_at             : chr "2011-05-04T12:25:11-04:00"
-##   ..$ system_types           : Named chr [1:2] "sometimes" "sometimes"
-##   .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
+##   ..$ system_types           :List of 2
+##   .. ..$ medical_examiner_system: chr "sometimes"
+##   .. ..$ coroner_system         : chr "sometimes"
 ##   ..$ medical_examiners      : list()
-##   .. ..- attr(*, "class")= chr "AsIs"
 ##   ..$ coroners               : list()
-##   .. ..- attr(*, "class")= chr "AsIs"
 ```
 
 ```r
-str(systems(36), max = 1)
+str(systems(36), max=1)
 ```
 
 ```
@@ -153,10 +232,9 @@ str(systems(36), max = 1)
 ##  $ uc_forensic_pathologists   : num 4
 ##  $ updated_at                 : chr "2011-05-04T12:23:55-04:00"
 ##  $ website                    : chr "http://www.nyc.gov/html/ocme/html/home/home.shtml"
-##  $ stats                      :List of 42
-##  $ geos                       :List of 5
+##  $ stats                      :'data.frame':	42 obs. of  3 variables:
+##  $ geos                       :'data.frame':	5 obs. of  12 variables:
 ```
-
 
 
 ### Free the Files ###
@@ -165,52 +243,35 @@ The [Free the Files API](https://projects.propublica.org/free-the-files/api) fun
 
 
 ```r
-library("RPublica")
-str(market()[1:2])
+library('RPublica')
+str(market())
 ```
 
 ```
-## List of 2
-##  $ :List of 1
-##   ..$ market:List of 5
-##   .. ..$ name          : chr "NEW YORK"
-##   .. ..$ slug          : chr "new-york"
-##   .. ..$ titleized_name: chr "New York"
-##   .. ..$ filings_ct    : num 475
-##   .. ..$ freed_ct      : num 127
-##  $ :List of 1
-##   ..$ market:List of 5
-##   .. ..$ name          : chr "PHILADELPHIA"
-##   .. ..$ slug          : chr "philadelphia"
-##   .. ..$ titleized_name: chr "Philadelphia"
-##   .. ..$ filings_ct    : num 780
-##   .. ..$ freed_ct      : num 637
+## 'data.frame':	33 obs. of  5 variables:
+##  $ market.name          : chr  "NEW YORK" "PHILADELPHIA" "BOSTON (MANCHESTER)" "WASHINGTON DC (HAGRSTWN)" ...
+##  $ market.slug          : chr  "new-york" "philadelphia" "boston-manchester" "washington-dc-hagrstwn" ...
+##  $ market.titleized_name: chr  "New York" "Philadelphia" "Boston and Manchester, N.H." "Washington, D.C. and Hagerstown, Md." ...
+##  $ market.filings_ct    : num  475 780 1736 988 5 ...
+##  $ market.freed_ct      : num  127 637 724 626 0 420 869 524 812 128 ...
 ```
 
 ```r
-m <- market("new-york")
-s <- station("WEWS-TV")
-str(committee()[1:2])
+m <- market('new-york')
+s <- station('WEWS-TV')
+str(committee())
 ```
 
 ```
-## List of 2
-##  $ :List of 1
-##   ..$ committee:List of 4
-##   .. ..$ gross_amt: NULL
-##   .. ..$ id       : num 4665
-##   .. ..$ name     : chr "PLANNED PARENTHOOD/ ISSUE"
-##   .. ..$ slug     : chr "planned-parenthood-issue"
-##  $ :List of 1
-##   ..$ committee:List of 4
-##   .. ..$ gross_amt: chr "221686816.25"
-##   .. ..$ id       : num 1221
-##   .. ..$ name     : chr "OBAMA FOR AMERICA"
-##   .. ..$ slug     : chr "obama-for-america"
+## 'data.frame':	1202 obs. of  4 variables:
+##  $ committee.gross_amt: chr  NA "221686816.25" "91778107" "57208760" ...
+##  $ committee.id       : num  4665 1221 1220 942 3959 ...
+##  $ committee.name     : chr  "PLANNED PARENTHOOD/ ISSUE" "OBAMA FOR AMERICA" "ROMNEY FOR PRESIDENT" "AMERICAN CROSSROADS" ...
+##  $ committee.slug     : chr  "planned-parenthood-issue" "obama-for-america" "romney-for-president" "american-crossroads--2" ...
 ```
 
 ```r
-ofa <- committee("obama-for-america")
+ofa <- committee('obama-for-america')
 str(filing(51212))
 ```
 
@@ -231,7 +292,6 @@ str(filing(51212))
 ##   ..$ id  : num 1221
 ##   ..$ name: chr "OBAMA FOR AMERICA"
 ##   ..$ slug: chr "obama-for-america"
-##  $ agency              : Named chr "GREER MARGOLIS MITCHELL"
-##   ..- attr(*, "names")= chr "name"
+##  $ agency              :List of 1
+##   ..$ name: chr "GREER MARGOLIS MITCHELL"
 ```
-

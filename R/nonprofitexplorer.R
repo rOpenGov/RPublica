@@ -11,12 +11,12 @@ np_search <- function(q=NULL, order=NULL, sort=NULL, state=NULL, ntee=NULL, subs
     args <- paste('?', paste(names(args), args, sep='=', collapse='&'), sep='')
     out <- ppQuery('search',
                    'https://projects.propublica.org/nonprofits/api/v1/',
-                   fmt='json', args=args, ...)
+                   args=args, ...)
     return(out)
 }
 
 np_org <- function(ein, ...){
     out <- ppQuery(paste('organizations',ein,sep='/'),
-                   'https://projects.propublica.org/nonprofits/api/v1/', fmt='json',  ...)
+                   'https://projects.propublica.org/nonprofits/api/v1/', ...)
     return(out)
 }

@@ -1,4 +1,4 @@
 exportPattern("^[[:alpha:]]+")
-importFrom(XML, xmlToList)
-importFrom(RJSONIO, fromJSON)
-importFrom(RCurl, getURL, curlEscape)
+importFrom(jsonlite, fromJSON)
+importFrom(RCurl, curlEscape)
+importFrom(httr, GET, content, stop_for_status)
