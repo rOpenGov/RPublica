@@ -8,7 +8,7 @@ Authors@R: c(person("Thomas J.", "Leeper", role = c("aut", "cre"),
              person("Jeroen","Ooms", role = "ctb"))
 Maintainer: Thomas J. Leeper <thosjleeper@gmail.com>
 Imports: jsonlite, httr, RCurl
-Description: Client for accessing ProPublica's data journalism APIs
+Description: Client package for accessing data journalism APIs from ProPublica (http://www.propublica.org/).
 License: GPL-2
 URL: https://github.com/rOpenGov/RPublica
 BugReports: https://github.com/rOpenGov/RPublica/issues
