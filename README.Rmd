@@ -48,7 +48,7 @@ The [Forensics API](http://projects.propublica.org/forensics/api) functionality 
 ```{r eval=TRUE, echo=TRUE}
 library('RPublica')
 g <- geos()
-str(g)
+str(g[1:5])
 str(geos('ny'))
 str(systems(36), max=1)
 ```
@@ -60,10 +60,10 @@ The [Free the Files API](https://projects.propublica.org/free-the-files/api) fun
 
 ```{r eval=TRUE, echo=TRUE}
 library('RPublica')
-str(market())
+str(market()[1:5])
 m <- market('new-york')
 s <- station('WEWS-TV')
-str(committee())
+str(committee()[1:5])
 ofa <- committee('obama-for-america')
 str(filing(51212))
 ```

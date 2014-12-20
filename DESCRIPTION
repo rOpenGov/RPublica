@@ -2,7 +2,7 @@ Package: RPublica
 Type: Package
 Title: ProPublica API Client
 Version: 0.1.2
-Date: 2014-07-24
+Date: 2014-12-20
 Authors@R: c(person("Thomas J.", "Leeper", role = c("aut", "cre"),
                     email = "thosjleeper@gmail.com"),
              person("Jeroen","Ooms", role = "ctb"))
