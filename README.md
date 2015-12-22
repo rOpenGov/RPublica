@@ -1,5 +1,7 @@
 # ProPublica API Client #
 
+[![CRAN Version](http://www.r-pkg.org/badges/version/RPublica)](http://cran.r-project.org/package=RPublica)
+![Downloads](http://cranlogs.r-pkg.org/badges/RPublica)
 [![Build Status](https://travis-ci.org/rOpenGov/RPublica.png?branch=master)](https://travis-ci.org/rOpenGov/RPublica)
 
 The package is released under GPL-2 as part of the [rOpenGov](http://ropengov.github.io/) project. Licenses for the data depend on the particular API, but access to that data (regardless of license) through the APIs is allowed under [ProPublica's Data Terms of Use](http://www.propublica.org/about/propublica-data-terms-of-use).
@@ -38,27 +40,26 @@ The [Nonprofit Explorer API](http://projects.propublica.org/nonprofits/api) func
 
 ```r
 library('RPublica')
-str(np_search('propublica'), max=2)
+str(np_search('propublica'), max=1)
 ```
 
 ```
 ## List of 14
-##  $ total_results : num 2
-##  $ filings       :List of 2
-##   ..$ :List of 69
-##   ..$ :List of 69
-##  $ num_pages     : num 1
-##  $ cur_page      : num 0
-##  $ page_offset   : num 0
-##  $ per_page      : num 25
+##  $ total_results : int 2
+##  $ filings       :'data.frame':	2 obs. of  101 variables:
+##   .. [list output truncated]
+##  $ num_pages     : int 1
+##  $ cur_page      : int 0
+##  $ page_offset   : int 0
+##  $ per_page      : int 25
 ##  $ order         : NULL
 ##  $ sort_order    : NULL
 ##  $ search_query  : chr "propublica"
 ##  $ selected_state: NULL
-##  $ selected_ntee : num 0
+##  $ selected_ntee : int 0
 ##  $ selected_code : NULL
-##  $ data_source   : chr "ProPublica Nonprofit Explorer API: http://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Business Master Fil"| __truncated__
-##  $ api_version   : num 1
+##  $ data_source   : chr "ProPublica Nonprofit Explorer API: https://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Business Master Fi"| __truncated__
+##  $ api_version   : int 1
 ```
 
 ```r
@@ -68,10 +69,10 @@ str(np_org(142007220), max=1)
 ```
 ## List of 5
 ##  $ organization        :List of 31
-##  $ filings_with_data   :List of 2
-##  $ filings_without_data:List of 4
-##  $ data_source         : chr "ProPublica Nonprofit Explorer API: http://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Business Master Fil"| __truncated__
-##  $ api_version         : num 1
+##  $ filings_with_data   :'data.frame':	2 obs. of  68 variables:
+##  $ filings_without_data:'data.frame':	9 obs. of  5 variables:
+##  $ data_source         : chr "ProPublica Nonprofit Explorer API: https://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Business Master Fi"| __truncated__
+##  $ api_version         : int 1
 ```
 
 ### Forensics API ###
@@ -86,92 +87,12 @@ str(g[1:5])
 ```
 
 ```
-## List of 5
-##  $ :List of 1
-##   ..$ geo:List of 14
-##   .. ..$ ar_association_key_name: num 1
-##   .. ..$ cached_slug            : chr "ak"
-##   .. ..$ coroner_system         : chr "none"
-##   .. ..$ created_at             : chr "2011-05-04T12:22:11-04:00"
-##   .. ..$ district               : NULL
-##   .. ..$ id                     : num 2
-##   .. ..$ kind                   : chr "state"
-##   .. ..$ medical_examiner_system: chr "state"
-##   .. ..$ name                   : chr "Alaska"
-##   .. ..$ note                   : NULL
-##   .. ..$ population             : NULL
-##   .. ..$ postal_abbreviation    : chr "AK"
-##   .. ..$ updated_at             : chr "2011-05-04T12:25:09-04:00"
-##   .. ..$ system_types           : Named chr [1:2] "state" "none"
-##   .. .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
-##  $ :List of 1
-##   ..$ geo:List of 14
-##   .. ..$ ar_association_key_name: num 2
-##   .. ..$ cached_slug            : chr "ar"
-##   .. ..$ coroner_system         : chr "county"
-##   .. ..$ created_at             : chr "2011-05-04T12:22:11-04:00"
-##   .. ..$ district               : NULL
-##   .. ..$ id                     : num 5
-##   .. ..$ kind                   : chr "state"
-##   .. ..$ medical_examiner_system: chr "state"
-##   .. ..$ name                   : chr "Arkansas"
-##   .. ..$ note                   : NULL
-##   .. ..$ population             : NULL
-##   .. ..$ postal_abbreviation    : chr "AR"
-##   .. ..$ updated_at             : chr "2011-05-04T12:25:09-04:00"
-##   .. ..$ system_types           : Named chr [1:2] "state" "county"
-##   .. .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
-##  $ :List of 1
-##   ..$ geo:List of 14
-##   .. ..$ ar_association_key_name: num 3
-##   .. ..$ cached_slug            : chr "ct"
-##   .. ..$ coroner_system         : chr "none"
-##   .. ..$ created_at             : chr "2011-05-04T12:22:11-04:00"
-##   .. ..$ district               : NULL
-##   .. ..$ id                     : num 9
-##   .. ..$ kind                   : chr "state"
-##   .. ..$ medical_examiner_system: chr "state"
-##   .. ..$ name                   : chr "Connecticut"
-##   .. ..$ note                   : NULL
-##   .. ..$ population             : NULL
-##   .. ..$ postal_abbreviation    : chr "CT"
-##   .. ..$ updated_at             : chr "2011-05-04T12:25:09-04:00"
-##   .. ..$ system_types           : Named chr [1:2] "state" "none"
-##   .. .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
-##  $ :List of 1
-##   ..$ geo:List of 14
-##   .. ..$ ar_association_key_name: num 4
-##   .. ..$ cached_slug            : chr "de"
-##   .. ..$ coroner_system         : chr "none"
-##   .. ..$ created_at             : chr "2011-05-04T12:22:11-04:00"
-##   .. ..$ district               : NULL
-##   .. ..$ id                     : num 10
-##   .. ..$ kind                   : chr "state"
-##   .. ..$ medical_examiner_system: chr "state"
-##   .. ..$ name                   : chr "Delaware"
-##   .. ..$ note                   : NULL
-##   .. ..$ population             : NULL
-##   .. ..$ postal_abbreviation    : chr "DE"
-##   .. ..$ updated_at             : chr "2011-05-04T12:25:09-04:00"
-##   .. ..$ system_types           : Named chr [1:2] "state" "none"
-##   .. .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
-##  $ :List of 1
-##   ..$ geo:List of 14
-##   .. ..$ ar_association_key_name: num 5
-##   .. ..$ cached_slug            : chr "dc"
-##   .. ..$ coroner_system         : chr "none"
-##   .. ..$ created_at             : chr "2011-05-04T12:22:11-04:00"
-##   .. ..$ district               : NULL
-##   .. ..$ id                     : num 11
-##   .. ..$ kind                   : chr "state"
-##   .. ..$ medical_examiner_system: chr "state"
-##   .. ..$ name                   : chr "District of Columbia"
-##   .. ..$ note                   : NULL
-##   .. ..$ population             : NULL
-##   .. ..$ postal_abbreviation    : chr "DC"
-##   .. ..$ updated_at             : chr "2011-05-04T12:25:09-04:00"
-##   .. ..$ system_types           : Named chr [1:2] "state" "none"
-##   .. .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
+## 'data.frame':	80 obs. of  5 variables:
+##  $ geo.ar_association_key_name: int  1 2 3 4 5 6 7 8 9 10 ...
+##  $ geo.cached_slug            : chr  "ak" "ar" "ct" "de" ...
+##  $ geo.coroner_system         : chr  "none" "county" "none" "none" ...
+##  $ geo.created_at             : chr  "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" ...
+##  $ geo.district               : logi  NA NA NA NA NA NA ...
 ```
 
 ```r
@@ -185,7 +106,7 @@ str(geos('ny'))
 ##   ..$ coroner_system         : chr "sometimes"
 ##   ..$ created_at             : chr "2011-05-04T12:22:12-04:00"
 ##   ..$ district               : NULL
-##   ..$ id                     : num 36
+##   ..$ id                     : int 36
 ##   ..$ kind                   : chr "state"
 ##   ..$ medical_examiner_system: chr "sometimes"
 ##   ..$ name                   : chr "New York"
@@ -193,12 +114,11 @@ str(geos('ny'))
 ##   ..$ population             : NULL
 ##   ..$ postal_abbreviation    : chr "NY"
 ##   ..$ updated_at             : chr "2011-05-04T12:25:11-04:00"
-##   ..$ system_types           : Named chr [1:2] "sometimes" "sometimes"
-##   .. ..- attr(*, "names")= chr [1:2] "medical_examiner_system" "coroner_system"
+##   ..$ system_types           :List of 2
+##   .. ..$ medical_examiner_system: chr "sometimes"
+##   .. ..$ coroner_system         : chr "sometimes"
 ##   ..$ medical_examiners      : list()
-##   .. ..- attr(*, "class")= chr "AsIs"
 ##   ..$ coroners               : list()
-##   .. ..- attr(*, "class")= chr "AsIs"
 ```
 
 ```r
@@ -209,22 +129,22 @@ str(systems(36), max=1)
 ## List of 18
 ##  $ accreditation              : chr ""
 ##  $ autopsies                  : NULL
-##  $ bc_forensic_pathologists   : num 22
+##  $ bc_forensic_pathologists   : int 22
 ##  $ cached_slug                : NULL
 ##  $ created_at                 : chr "2011-05-04T12:23:55-04:00"
-##  $ fellows                    : num 4
+##  $ fellows                    : int 4
 ##  $ forensic_pathologists      : NULL
-##  $ id                         : num 36
+##  $ id                         : int 36
 ##  $ name                       : chr "New York City Office of Chief Medical Examiner"
 ##  $ note                       : chr "Not included in analysis of autopsy data. "
 ##  $ pending                    : NULL
-##  $ pt_bc_forensic_pathologists: num 0
-##  $ pt_uc_forensic_pathologists: num 0
-##  $ uc_forensic_pathologists   : num 4
+##  $ pt_bc_forensic_pathologists: int 0
+##  $ pt_uc_forensic_pathologists: int 0
+##  $ uc_forensic_pathologists   : int 4
 ##  $ updated_at                 : chr "2011-05-04T12:23:55-04:00"
 ##  $ website                    : chr "http://www.nyc.gov/html/ocme/html/home/home.shtml"
-##  $ stats                      :List of 42
-##  $ geos                       :List of 5
+##  $ stats                      :'data.frame':	42 obs. of  3 variables:
+##  $ geos                       :'data.frame':	5 obs. of  12 variables:
 ```
 
 
@@ -239,82 +159,26 @@ str(market()[1:5])
 ```
 
 ```
-## List of 5
-##  $ :List of 1
-##   ..$ market:List of 5
-##   .. ..$ name          : chr "NEW YORK"
-##   .. ..$ slug          : chr "new-york"
-##   .. ..$ titleized_name: chr "New York"
-##   .. ..$ filings_ct    : num 475
-##   .. ..$ freed_ct      : num 127
-##  $ :List of 1
-##   ..$ market:List of 5
-##   .. ..$ name          : chr "PHILADELPHIA"
-##   .. ..$ slug          : chr "philadelphia"
-##   .. ..$ titleized_name: chr "Philadelphia"
-##   .. ..$ filings_ct    : num 780
-##   .. ..$ freed_ct      : num 637
-##  $ :List of 1
-##   ..$ market:List of 5
-##   .. ..$ name          : chr "BOSTON (MANCHESTER)"
-##   .. ..$ slug          : chr "boston-manchester"
-##   .. ..$ titleized_name: chr "Boston and Manchester, N.H."
-##   .. ..$ filings_ct    : num 1736
-##   .. ..$ freed_ct      : num 726
-##  $ :List of 1
-##   ..$ market:List of 5
-##   .. ..$ name          : chr "WASHINGTON DC (HAGRSTWN)"
-##   .. ..$ slug          : chr "washington-dc-hagrstwn"
-##   .. ..$ titleized_name: chr "Washington, D.C. and Hagerstown, Md."
-##   .. ..$ filings_ct    : num 988
-##   .. ..$ freed_ct      : num 626
-##  $ :List of 1
-##   ..$ market:List of 5
-##   .. ..$ name          : chr "ATLANTA"
-##   .. ..$ slug          : chr "atlanta"
-##   .. ..$ titleized_name: chr "Atlanta"
-##   .. ..$ filings_ct    : num 5
-##   .. ..$ freed_ct      : num 0
+## 'data.frame':	33 obs. of  5 variables:
+##  $ market.name          : chr  "NEW YORK" "PHILADELPHIA" "BOSTON (MANCHESTER)" "WASHINGTON DC (HAGRSTWN)" ...
+##  $ market.slug          : chr  "new-york" "philadelphia" "boston-manchester" "washington-dc-hagrstwn" ...
+##  $ market.titleized_name: chr  "New York" "Philadelphia" "Boston and Manchester, N.H." "Washington, D.C. and Hagerstown, Md." ...
+##  $ market.filings_ct    : int  475 718 1736 988 5 658 1331 2687 1429 565 ...
+##  $ market.freed_ct      : int  127 642 726 626 0 420 869 527 813 128 ...
 ```
 
 ```r
 m <- market('new-york')
 s <- station('WEWS-TV')
-str(committee()[1:5])
+str(committee())
 ```
 
 ```
-## List of 5
-##  $ :List of 1
-##   ..$ committee:List of 4
-##   .. ..$ gross_amt: NULL
-##   .. ..$ id       : num 4665
-##   .. ..$ name     : chr "PLANNED PARENTHOOD/ ISSUE"
-##   .. ..$ slug     : chr "planned-parenthood-issue"
-##  $ :List of 1
-##   ..$ committee:List of 4
-##   .. ..$ gross_amt: chr "221716606.25"
-##   .. ..$ id       : num 1221
-##   .. ..$ name     : chr "OBAMA FOR AMERICA"
-##   .. ..$ slug     : chr "obama-for-america"
-##  $ :List of 1
-##   ..$ committee:List of 4
-##   .. ..$ gross_amt: chr "91778107"
-##   .. ..$ id       : num 1220
-##   .. ..$ name     : chr "ROMNEY FOR PRESIDENT"
-##   .. ..$ slug     : chr "romney-for-president"
-##  $ :List of 1
-##   ..$ committee:List of 4
-##   .. ..$ gross_amt: chr "57249945"
-##   .. ..$ id       : num 942
-##   .. ..$ name     : chr "AMERICAN CROSSROADS"
-##   .. ..$ slug     : chr "american-crossroads--2"
-##  $ :List of 1
-##   ..$ committee:List of 4
-##   .. ..$ gross_amt: chr "41675492"
-##   .. ..$ id       : num 3959
-##   .. ..$ name     : chr "RESTORE OUR FUTURE"
-##   .. ..$ slug     : chr "restore-our-future"
+## 'data.frame':	1203 obs. of  4 variables:
+##  $ committee.gross_amt: chr  NA "221716606.25" "91778107" "57249945" ...
+##  $ committee.id       : int  4665 1221 1220 942 3959 3820 883 1170 907 1172 ...
+##  $ committee.name     : chr  "PLANNED PARENTHOOD/ ISSUE" "OBAMA FOR AMERICA" "ROMNEY FOR PRESIDENT" "AMERICAN CROSSROADS" ...
+##  $ committee.slug     : chr  "planned-parenthood-issue" "obama-for-america" "romney-for-president" "american-crossroads--2" ...
 ```
 
 ```r
@@ -329,16 +193,16 @@ str(filing(51212))
 ##  $ dc_slug             : chr "501618-69338-2-13519611148107-_-pdf"
 ##  $ filing_type         : chr "Federal"
 ##  $ gross_amount        : num 35940
-##  $ id                  : num 51212
-##  $ market_id           : num 41
+##  $ id                  : int 51212
+##  $ market_id           : int 41
 ##  $ thumbnail_url       : chr "https://s3.amazonaws.com/s3.documentcloud.org/documents/501618/pages/69338-2-13519611148107-_-pdf-p1-thumbnail.gif"
-##  $ transcriptions_count: num 2
+##  $ transcriptions_count: int 2
 ##  $ upload_date         : chr "2012-11-03T00:00:00Z"
 ##  $ url                 : chr "/collect/files/72313/Political File/2012/Federal/President/BARACK OBAMA/69338/69338-2 (13519611148107)_.pdf"
 ##  $ committee           :List of 3
-##   ..$ id  : num 1221
+##   ..$ id  : int 1221
 ##   ..$ name: chr "OBAMA FOR AMERICA"
 ##   ..$ slug: chr "obama-for-america"
-##  $ agency              : Named chr "GREER MARGOLIS MITCHELL"
-##   ..- attr(*, "names")= chr "name"
+##  $ agency              :List of 1
+##   ..$ name: chr "GREER MARGOLIS MITCHELL"
 ```

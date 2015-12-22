@@ -7,7 +7,7 @@ filing(id, ...)
 }
 \arguments{
   \item{id}{A character string containing a filing identification number.}
-  \item{\dots}{Arguments passed to \code{\link{getURL}}.}
+  \item{\dots}{Arguments passed to \code{\link[httr]{GET}}.}
 }
 %\details{}
 %\value{}

@@ -1,4 +1,4 @@
 exportPattern("^[[:alpha:]]+")
 importFrom(jsonlite, fromJSON)
-importFrom(RCurl, curlEscape)
+importFrom(curl, curl_escape)
 importFrom(httr, GET, content, stop_for_status)

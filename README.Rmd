@@ -1,5 +1,7 @@
 # ProPublica API Client #
 
+[![CRAN Version](http://www.r-pkg.org/badges/version/RPublica)](http://cran.r-project.org/package=RPublica)
+![Downloads](http://cranlogs.r-pkg.org/badges/RPublica)
 [![Build Status](https://travis-ci.org/rOpenGov/RPublica.png?branch=master)](https://travis-ci.org/rOpenGov/RPublica)
 
 The package is released under GPL-2 as part of the [rOpenGov](http://ropengov.github.io/) project. Licenses for the data depend on the particular API, but access to that data (regardless of license) through the APIs is allowed under [ProPublica's Data Terms of Use](http://www.propublica.org/about/propublica-data-terms-of-use).
@@ -37,7 +39,7 @@ The [Nonprofit Explorer API](http://projects.propublica.org/nonprofits/api) func
 
 ```{r eval=TRUE, echo=TRUE}
 library('RPublica')
-str(np_search('propublica'), max=2)
+str(np_search('propublica'), max=1)
 str(np_org(142007220), max=1)
 ```
 
@@ -63,7 +65,7 @@ library('RPublica')
 str(market()[1:5])
 m <- market('new-york')
 s <- station('WEWS-TV')
-str(committee()[1:5])
+str(committee())
 ofa <- committee('obama-for-america')
 str(filing(51212))
 ```

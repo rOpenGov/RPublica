@@ -16,7 +16,7 @@ np_org(ein, ...)
   \item{ntee}{A numeric value (between 1 and 10) containing a \href{http://nccs.urban.org/classification/NTEE.cfm}{National Taxonomy of Exempt Entities (NTEE) Major Group} code.}
   \item{subsection}{A numeric value (between 2 and 92) referring to a subsection of tax code section 501(c).}
   \item{ein}{An employer identification number (EIN).}
-  \item{\dots}{Arguments passed to \code{\link{getURL}}.}
+  \item{\dots}{Arguments passed to \code{\link[httr]{GET}}.}
 }
 %\details{}
 \value{A list containing the API response.}

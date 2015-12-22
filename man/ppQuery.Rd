@@ -9,7 +9,7 @@ ppQuery(op, baseurl, args = NULL, ...)
   \item{op}{A character string containing an API operation, and associated arguments.}
   \item{baseurl}{The base URL for conducting the API query.}
   \item{args}{A character string containing additional URL-encoded parameters.}
-  \item{\dots}{Arguments passed to \code{\link{getURL}}.}
+  \item{\dots}{Arguments passed to \code{\link[httr]{GET}}.}
 }
 %\details{}
 %\value{}

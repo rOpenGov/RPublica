@@ -11,7 +11,7 @@ systems(id, ...)
 \arguments{
   \item{state}{An optional character string containing a two-letter state postal code. If \code{NULL}, results for all available states are returned.}
   \item{id}{The identification number for a particular medical examiner or coroner system.}
-  \item{\dots}{Arguments passed to \code{\link{getURL}}.}
+  \item{\dots}{Arguments passed to \code{\link[httr]{GET}}.}
 }
 %\details{}
 %\value{}

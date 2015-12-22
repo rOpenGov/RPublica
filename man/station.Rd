@@ -7,7 +7,7 @@ station(callsign, ...)
 }
 \arguments{
   \item{callsign}{A character string containing a station callsign.}
-  \item{\dots}{Arguments passed to \code{\link{getURL}}.}
+  \item{\dots}{Arguments passed to \code{\link[httr]{GET}}.}
 }
 %\details{}
 %\value{}
