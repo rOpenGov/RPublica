@@ -10,7 +10,7 @@ Authors@R: c(
   )
 Maintainer: Thomas J. Leeper <thosjleeper@gmail.com>
 Description: Client for accessing data journalism APIs from ProPublica
-    <http://www.propublica.org/>.
+    <https://www.propublica.org/>.
 License: GPL-2
 URL: https://github.com/rOpenGov/RPublica,
     https://ropengov.github.io/RPublica/
@@ -19,6 +19,12 @@ Imports:
     curl,
     httr,
     jsonlite
+Suggests: 
+    testthat (>= 3.0.0),
+    tibble
+Config/testthat/edition: 3
 Encoding: UTF-8
 X-schema.org-isPartOf: http://ropengov.org/
 X-schema.org-keywords: ropengov
+RoxygenNote: 7.1.2
+Roxygen: list(markdown = TRUE)

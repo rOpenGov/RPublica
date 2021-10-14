@@ -13,14 +13,14 @@ np_org(ein, ...)
   \item{order}{A character string containing a field by which to order the results. One of \dQuote{name}, \dQuote{city}, \dQuote{state}, \dQuote{c_code}, \dQuote{fiscalyr}, \dQuote{revenue}, \dQuote{expenses}, \dQuote{assets}, \dQuote{liabilities}, \dQuote{pct_officer_compt}. The ascending or descending sort by this parameter is controlled by \code{sort}.}
   \item{sort}{One of \dQuote{asc} or \dQuote{desc}, controlling the order of the results (according the the ordering given in \code{order}).}
   \item{state}{A two-letter state postal abbreviation code for a U.S. state or territory. Use \dQuote{ZZ} for foreign organizations.}
-  \item{ntee}{A numeric value (between 1 and 10) containing a \href{http://nccs.urban.org/classification/NTEE.cfm}{National Taxonomy of Exempt Entities (NTEE) Major Group} code.}
+  \item{ntee}{A numeric value (between 1 and 10) containing a \href{https://nccs.urban.org/search?keywords=NTEE}{National Taxonomy of Exempt Entities (NTEE) Major Group} code.}
   \item{subsection}{A numeric value (between 2 and 92) referring to a subsection of tax code section 501(c).}
   \item{ein}{An employer identification number (EIN).}
   \item{\dots}{Arguments passed to \code{\link[httr]{GET}}.}
 }
 %\details{}
 \value{A list containing the API response.}
-\references{\href{http://projects.propublica.org/nonprofits/api}{API Documentation}}
+\references{\href{https://projects.propublica.org/nonprofits/api}{API Documentation}}
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}

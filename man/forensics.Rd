@@ -15,7 +15,7 @@ systems(id, ...)
 }
 %\details{}
 %\value{}
-\references{\href{http://projects.propublica.org/forensics/api}{API Documentation}}
+\references{\href{https://projects.propublica.org/forensics/api.html}{API Documentation}}
 \author{Thomas J. Leeper}
 %\note{}
 %\seealso{}
