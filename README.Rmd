@@ -1,8 +1,15 @@
-# ProPublica API Client #
+# RPublica <a href='https://ropengov.github.io/RPublica'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
+<!-- badges: start -->
+[![rOG-badge](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](http://ropengov.org/)
 [![CRAN Version](http://www.r-pkg.org/badges/version/RPublica)](http://cran.r-project.org/package=RPublica)
 ![Downloads](http://cranlogs.r-pkg.org/badges/RPublica)
-[![Build Status](https://travis-ci.org/rOpenGov/RPublica.png?branch=master)](https://travis-ci.org/rOpenGov/RPublica)
+[![R build
+status](https://github.com/rOpenGov/RPublica/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/RPublica/actions)
+<!-- badges: end -->
+
+
+## ProPublica API Client 
 
 The package is released under GPL-2 as part of the [rOpenGov](http://ropengov.github.io/) project. Licenses for the data depend on the particular API, but access to that data (regardless of license) through the APIs is allowed under [ProPublica's Data Terms of Use](http://www.propublica.org/about/propublica-data-terms-of-use).
 
