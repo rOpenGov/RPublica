@@ -93,10 +93,511 @@ details.</p></dd>
 
     <div id="examples">
     <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \dontrun{</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu">committee</span><span class="op">(</span><span class="st">"warren-for-senate-2012"</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$canonical_committee_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$fec_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3934</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "WARREN FOR SENATE 2012"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$pactrack</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$party</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$slug</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "warren-for-senate-2012"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$state_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$freed_files</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    filing.callsign filing.contract_number</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1           WBZ-TV                  58469</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2           WBZ-TV                  58398</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3           WBZ-TV           1061-58397-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4             WHDH                  48466</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5           WBZ-TV           1061-58409-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6           WBZ-TV           1061-58469-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7           WBZ-TV                  58191</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8             WHDH                  47708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9             WHDH                  47708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10            WFXT                 138032</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11          WBZ-TV                  58025</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12          WBZ-TV                  58120</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13          WBZ-TV                  58029</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14          WBZ-TV                  58126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15          WBZ-TV           1061-58126-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16            WFXT                 122924</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17            WFXT                 126758</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18            WFXT                 130035</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19            WFXT             121348 / 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20            WFXT                 133284</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21            WFXT                 122656</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22            WFXT                 122900</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23            WFXT                 122911</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24            WFXT                 125362</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25            WFXT                 117346</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26            WHDH                  48479</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27            WHDH                  47874</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28            WHDH                  47708</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29            WHDH                  48263</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30            WHDH                  48293</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31          WBZ-TV           1061-58029-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32          WBZ-TV           1061-58190-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33          WBZ-TV           1061-58192-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34          WBZ-TV                  58190</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35          WBZ-TV                  58192</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36          WBZ-TV           1061-58191-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37          WBZ-TV           1061-58244-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38          WBZ-TV                  58409</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39          WBZ-TV                  58397</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40          WBZ-TV                  58244</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41          WBZ-TV           1061-58398-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42            WHDH                  48127</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43          WBZ-TV                  58301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44          WBZ-TV           1061-58301-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45            WFXT                 127543</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46            WFXT                 129040</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47            WFXT                 129089</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48            WHDH                  48262</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49            WFXT                 117320</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50            WHDH                  48048</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51            WFXT                 121348</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52            WFXT                 132261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53            WFXT                 135587</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54            WHDH                  47702</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55            WHDH                  47711</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56          WBZ-TV           1061-58025-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57          WBZ-TV           1061-58120-1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                            filing.dc_slug filing.filing_type</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  444353-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  443225-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  443222-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  444345-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  443226-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  444352-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  431719-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   477716-warren-for-senate-est-11666-new-10-22-10-28-12            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  477717-warren-for-senate-est-11666-revised-10-22-10-28            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10           476419-warren-est-12570-13505067103162-_-pdf            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 418107-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 418112-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 418110-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 418114-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 418113-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16  427463-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17           455922-warren-est-11954-13494593967715-_-pdf            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  442846-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  421303-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20           455923-warren-est-12217-13493802078464-_-pdf            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21  422313-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22  427461-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23  427462-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24  427464-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25  431336-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 444346-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 439538-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 421178-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 439541-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 443211-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 418108-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 424223-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 424225-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 431718-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 431720-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 424224-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 427579-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 443227-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 443223-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 427580-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 443224-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 439539-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 434122-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 434121-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45  434989-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46  439604-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47  439605-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 439540-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49  431335-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 431257-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51  417074-collect-files-6463-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52           452965-warren-est-12184-13492788108564-_-pdf            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53           462051-warren-est-12228-13498878560801-_-pdf            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54 421177-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 421179-collect-files-72145-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 418105-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 418111-collect-files-25456-political-file-2012-federal            Federal</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    filing.gross_amount filing.id filing.market_id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1               355510     17693                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2               212570     16868                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                21440     16865                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4               323500     17685                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                34430     16869                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6               355510     17692                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7               359550     11774                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8               325900     37293                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9               405350     37294                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10               16200     35998                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11               79104      3912                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12              106865      3917                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13               95130      3915                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14              122565      3919                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15              109070      3918                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16              137150      8940                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17              143450     20955                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18               28000     16538                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19               82850      6769                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20               13000     20956                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21               82725      7454                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22              101150      8938                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23              146250      8939                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24              164260      8941                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25               49425     11396                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26               20000     17686                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27              204200     15396                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28              325900      6644                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29               35000     15399                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30               69300     16855                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31               91440      3913                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32              286060      7690                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33              330495      7692                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34              297940     11773                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35              330495     11775                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36              359550      7691                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37              196955      9056                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38               34430     16870                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39               21440     16866                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40              196955      9057                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41              212570     16867                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42               53900     15397                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43              236635     13306                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44              234835     13305                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45               54400     13781                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46              127050     15460                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47               14400     15461                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48              200650     15398                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49               52375     11395                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50              264850     11318                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51               82850      2904                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52              184875     18888                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53              192500     24899                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54              293600      6643                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55              394650      6645                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56               77704      3910                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57              103175      3916                7</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                     filing.thumbnail_url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  https://s3.amazonaws.com/s3.documentcloud.org/documents/444353/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  https://s3.amazonaws.com/s3.documentcloud.org/documents/443225/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  https://s3.amazonaws.com/s3.documentcloud.org/documents/443222/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  https://s3.amazonaws.com/s3.documentcloud.org/documents/444345/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  https://s3.amazonaws.com/s3.documentcloud.org/documents/443226/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  https://s3.amazonaws.com/s3.documentcloud.org/documents/444352/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  https://s3.amazonaws.com/s3.documentcloud.org/documents/431719/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8   https://s3.amazonaws.com/s3.documentcloud.org/documents/477716/pages/warren-for-senate-est-11666-new-10-22-10-28-12-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  https://s3.amazonaws.com/s3.documentcloud.org/documents/477717/pages/warren-for-senate-est-11666-revised-10-22-10-28-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10           https://s3.amazonaws.com/s3.documentcloud.org/documents/476419/pages/warren-est-12570-13505067103162-_-pdf-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 https://s3.amazonaws.com/s3.documentcloud.org/documents/418107/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 https://s3.amazonaws.com/s3.documentcloud.org/documents/418112/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 https://s3.amazonaws.com/s3.documentcloud.org/documents/418110/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 https://s3.amazonaws.com/s3.documentcloud.org/documents/418114/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 https://s3.amazonaws.com/s3.documentcloud.org/documents/418113/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16  https://s3.amazonaws.com/s3.documentcloud.org/documents/427463/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17           https://s3.amazonaws.com/s3.documentcloud.org/documents/455922/pages/warren-est-11954-13494593967715-_-pdf-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18  https://s3.amazonaws.com/s3.documentcloud.org/documents/442846/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19  https://s3.amazonaws.com/s3.documentcloud.org/documents/421303/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20           https://s3.amazonaws.com/s3.documentcloud.org/documents/455923/pages/warren-est-12217-13493802078464-_-pdf-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21  https://s3.amazonaws.com/s3.documentcloud.org/documents/422313/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22  https://s3.amazonaws.com/s3.documentcloud.org/documents/427461/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23  https://s3.amazonaws.com/s3.documentcloud.org/documents/427462/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24  https://s3.amazonaws.com/s3.documentcloud.org/documents/427464/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25  https://s3.amazonaws.com/s3.documentcloud.org/documents/431336/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 https://s3.amazonaws.com/s3.documentcloud.org/documents/444346/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 https://s3.amazonaws.com/s3.documentcloud.org/documents/439538/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 https://s3.amazonaws.com/s3.documentcloud.org/documents/421178/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 https://s3.amazonaws.com/s3.documentcloud.org/documents/439541/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 https://s3.amazonaws.com/s3.documentcloud.org/documents/443211/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 https://s3.amazonaws.com/s3.documentcloud.org/documents/418108/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 https://s3.amazonaws.com/s3.documentcloud.org/documents/424223/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 https://s3.amazonaws.com/s3.documentcloud.org/documents/424225/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 https://s3.amazonaws.com/s3.documentcloud.org/documents/431718/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 https://s3.amazonaws.com/s3.documentcloud.org/documents/431720/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 https://s3.amazonaws.com/s3.documentcloud.org/documents/424224/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 https://s3.amazonaws.com/s3.documentcloud.org/documents/427579/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 https://s3.amazonaws.com/s3.documentcloud.org/documents/443227/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 https://s3.amazonaws.com/s3.documentcloud.org/documents/443223/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 https://s3.amazonaws.com/s3.documentcloud.org/documents/427580/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 https://s3.amazonaws.com/s3.documentcloud.org/documents/443224/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 https://s3.amazonaws.com/s3.documentcloud.org/documents/439539/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 https://s3.amazonaws.com/s3.documentcloud.org/documents/434122/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 https://s3.amazonaws.com/s3.documentcloud.org/documents/434121/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45  https://s3.amazonaws.com/s3.documentcloud.org/documents/434989/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46  https://s3.amazonaws.com/s3.documentcloud.org/documents/439604/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47  https://s3.amazonaws.com/s3.documentcloud.org/documents/439605/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 https://s3.amazonaws.com/s3.documentcloud.org/documents/439540/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49  https://s3.amazonaws.com/s3.documentcloud.org/documents/431335/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 https://s3.amazonaws.com/s3.documentcloud.org/documents/431257/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51  https://s3.amazonaws.com/s3.documentcloud.org/documents/417074/pages/collect-files-6463-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52           https://s3.amazonaws.com/s3.documentcloud.org/documents/452965/pages/warren-est-12184-13492788108564-_-pdf-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53           https://s3.amazonaws.com/s3.documentcloud.org/documents/462051/pages/warren-est-12228-13498878560801-_-pdf-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54 https://s3.amazonaws.com/s3.documentcloud.org/documents/421177/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 https://s3.amazonaws.com/s3.documentcloud.org/documents/421179/pages/collect-files-72145-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 https://s3.amazonaws.com/s3.documentcloud.org/documents/418105/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 https://s3.amazonaws.com/s3.documentcloud.org/documents/418111/pages/collect-files-25456-political-file-2012-federal-p1-thumbnail.gif</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    filing.transcriptions_count   filing.upload_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                            2 2012-09-28T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                            2 2012-09-25T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                            3 2012-09-25T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                            3 2012-09-28T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                            3 2012-09-25T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                            3 2012-09-28T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                            2 2012-09-05T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                            3 2012-10-18T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                            3 2012-10-18T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                           2 2012-10-17T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                           2 2012-08-14T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                           2 2012-08-23T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                           2 2012-08-14T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                           2 2012-08-23T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                           4 2012-08-27T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                           2 2012-09-11T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                           3 2012-10-05T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                           2 2012-09-25T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                           3 2012-08-31T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                           2 2012-10-04T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                           3 2012-08-31T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                           2 2012-09-11T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                           2 2012-09-11T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                           2 2012-09-11T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                           2 2012-08-10T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                           3 2012-09-28T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                           4 2012-09-21T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                           3 2012-08-31T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29                           4 2012-09-21T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                           3 2012-09-24T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                           4 2012-08-14T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                           3 2012-09-05T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                           3 2012-09-05T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                           3 2012-09-05T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                           2 2012-09-05T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                           3 2012-09-05T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                           2 2012-09-10T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                           2 2012-09-25T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                           2 2012-09-25T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                           2 2012-09-10T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                           3 2012-09-25T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                           3 2012-09-21T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                           3 2012-09-14T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                           2 2012-09-14T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                           2 2012-09-17T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                           2 2012-09-21T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                           2 2012-09-21T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                           2 2012-09-21T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                           2 2012-08-10T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                           2 2012-09-13T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                           2 2012-08-24T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                           2 2012-10-03T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                           3 2012-10-10T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                           3 2012-08-31T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                           3 2012-08-31T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                           5 2012-08-14T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                           4 2012-08-27T00:00:00Z</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                   filing.url</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1      /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58469 FED ORDER (13488447324801)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2      /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58398 FED ORDER (13485819033698)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3      /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58397 FED TRACT (13485819065896)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4        /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 12184 NEW 10.1.12 - 10.7.12 (13488454296047)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5      /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58409 FED TRACT (13485905719417)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6      /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58469 FED TRACT (13488447456255)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7      /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58191 FED ORDER (13468551332360)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8           /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 11666 NEW 10.22-10.28.12 (13505761847846)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9       /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 11666 Revised 10.22-10.28.12 (13505761848354)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12570 (13505067103162)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58025 FED ORDER (13449696816301)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12    /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ WARREN FOR SENATE D SENATEMA ORD58120 FED ORDER (13457355056808)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58029 FED ORDER (13449696816990)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14    /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ WARREN FOR SENATE D SENATEMA ORD58126 FED ORDER (13457355068812)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ WARREN FOR SENATE D SENATEMA ORD58126 FED CONTRACT (13460805058183)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11667 (13473746774509)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11954 (13494593967715)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12156 (13485795067282)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                                       /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/WARREN EST 11662.1 (13464534032681)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12217 (13493802078464)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/WARREN EST 11664 (13464543124336)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11665 (13473748727823)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11666 (13473746774224)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11862 (13473746774917)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11586 (13446273164727)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26       /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 12217 NEW 10.1.12 - 10.7.12 (13488459399306)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27             /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 11862 REV 1 9.10-9.16 (13482567141112)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28          /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 11666 NEW 10.22-10.28.12 (13464254675922)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29             /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 12100 9.24.12-9.30.12 (13482606128095)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30       /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 12156 NEW 9.25.12 - 9.30.12 (13485201542678)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58029 FED CONTRACT (13449777167988)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58190 FED CONTRACT (13468779206050)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58192 FED CONTRACT (13468776145271)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58190 FED ORDER (13468551364772)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58192 FED ORDER (13468551321346)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58191 FED CONTRACT (13468776134107)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58244 FED CONTRACT (13472946211177)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58409 FED ORDER (13485905709846)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58397 FED ORDER (13485819044576)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58244 FED ORDER (13472946200060)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58398 FED TRACT (13485819055209)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42         /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 12054 New 9.18.12-9.23.12 (13482594068604)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43     /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58301 FED ORDER (13476582100669)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58301 FED CONTRACT (13476582111538)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12054 (13479165060321)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12099 (13482405064495)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12100 (13482405054072)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48             /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 12099 9.24.12-9.30.12 (13482606084640)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11585 (13446272252913)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50               /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 11954 NEW 9.17-9.23 (13475484124015)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 11662 (13458400872787)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12184 (13492788108564)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                                         /collect/files/6463/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren Est 12228 (13498878560801)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54          /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 11665 NEW 10.15-10.21.12 (13464254674972)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55           /collect/files/72145/Political File/2012/Federal/US Senate/Elizabeth Warren/Warren for Senate Est 11667 NEW 10.29-11.6.12 (13464254677157)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58025 FED CONTRACT (13449771554387)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57  /collect/files/25456/Political File/2012/Federal/US Senate/ELIZABETH WARREN /WBZ ELIZABETH WARREN D SENATEMA ORD58120 FED CONTRACT (13460805069185)_.pdf</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>    filing.committee.id  filing.committee.name  filing.committee.slug</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                 3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57                3934 WARREN FOR SENATE 2012 warren-for-senate-2012</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>             filing.agency.name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9  MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 55 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 56 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 57 MEDIA STRATEGIES &amp; RESEARCH</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$freed_ct</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 57</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$gross_amount</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 9452133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $committee$from_pactrack</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span class="co"># }</span></span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>

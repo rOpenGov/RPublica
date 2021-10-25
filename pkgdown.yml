@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.9000.9000.9000
 pkgdown_sha: fd52fd444d2af63ef21dc9b77586892a9dae8fea
 articles: {}
-last_built: 2021-10-25T14:56Z
+last_built: 2021-10-25T15:26Z
 urls:
   reference: https://ropengov.github.io/RPublica/reference
   article: https://ropengov.github.io/RPublica/articles

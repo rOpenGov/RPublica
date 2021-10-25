@@ -95,12 +95,190 @@ coroner system.</p></dd>
 
     <div id="examples">
     <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
+    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># \dontrun{</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu">geos</span><span class="op">(</span><span class="st">"48029"</span><span class="op">)</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$cached_slug</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bexar-county"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$coroner_system</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "none"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$created_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2011-05-04T12:23:12-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$district</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 48029</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$kind</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "county"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$medical_examiner_system</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "county"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Bexar County"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$note</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$population</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$postal_abbreviation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TX"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$updated_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2011-05-04T12:24:56-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$system_types</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$system_types$medical_examiner_system</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "county"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$system_types$coroner_system</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "none"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$medical_examiners</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   accreditation autopsies bc_forensic_pathologists cached_slug</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1          Full        NA                        5          NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  created_at fellows forensic_pathologists id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2011-05-04T12:23:52-04:00       1                    NA 34</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                    name note pending</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Bexar County (Texas) Medical Examiner   NA      NA</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   pt_bc_forensic_pathologists pt_uc_forensic_pathologists</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                           0                           0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   uc_forensic_pathologists                updated_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                        0 2011-05-04T12:23:53-04:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                 website</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 http://www.bexar.org/medicalexaminer/</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          stats</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 population, pt_provisional_forensic_pathologists, autopsies, annual_fiscal_budget, forensic_pathologists, contract_cases, population, pt_provisional_forensic_pathologists, autopsies, annual_fiscal_budget, forensic_pathologists, contract_cases, population, pt_provisional_forensic_pathologists, autopsies, annual_fiscal_budget, forensic_pathologists, contract_cases, population, pt_provisional_forensic_pathologists, autopsies, annual_fiscal_budget, forensic_pathologists, contract_cases, population, pt_provisional_forensic_pathologists, autopsies, annual_fiscal_budget, forensic_pathologists, contract_cases, population, pt_provisional_forensic_pathologists, autopsies, annual_fiscal_budget, forensic_pathologists, contract_cases, population, pt_provisional_forensic_pathologists, annual_fiscal_budget, forensic_pathologists, autopsy_ratio, raw_autopsy_rate, autopsy_standard_deviation, autopsy_ratio, raw_autopsy_rate, autopsy_standard_deviation, autopsy_ratio, raw_autopsy_rate, autopsy_standard_deviation, autopsy_ratio, raw_autopsy_rate, autopsy_standard_deviation, 1487460, 0, 1300, 0, 5, 241, 1511510, 0, 1247, 2979300, 5, 243, 1550920, 0, 1323, 3133380, 4, 220, 1588900, 0, 1348, 3250820, 4, 118, 1621300, 0, 1303, 3690210, 4, 76, 1651450, 0, 1221, 3972260, 5, 71, 0, 0, 4041600, 5, -0.10843, 9.5184, -0.39, -0.0654056, 10.1282, -0.24, -0.0256922, 10.3452, -0.09, 0.0866295, 11.4835, 0.31, 2004, 2004, 2004, 2004, 2004, 2004, 2005, 2005, 2005, 2005, 2005, 2005, 2006, 2006, 2006, 2006, 2006, 2006, 2007, 2007, 2007, 2007, 2007, 2007, 2008, 2008, 2008, 2008, 2008, 2008, 2009, 2009, 2009, 2009, 2009, 2009, 2010, 2010, 2010, 2010, 2005, 2005, 2005, 2004, 2004, 2004, 2006, 2006, 2006, 2007, 2007, 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geo$coroners</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> list()</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu">systems</span><span class="op">(</span><span class="fl">39</span><span class="op">)</span></span>
-<span class="r-in"><span class="op">}</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $accreditation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] ""</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $autopsies</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $bc_forensic_pathologists</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $cached_slug</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $created_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2011-05-04T12:24:00-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $fellows</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $forensic_pathologists</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $id</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 39</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $name</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Erie County (N.Y.) Medical Examiner"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $note</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pending</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pt_bc_forensic_pathologists</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pt_uc_forensic_pathologists</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $uc_forensic_pathologists</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $updated_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2011-05-04T12:24:00-04:00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $website</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "http://www2.erie.gov/health/index.php?q=medical-examiner"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $stats</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                                    kind        value year</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                            population  9.32002e+05 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 2  pt_provisional_forensic_pathologists  1.00000e+00 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 3                             autopsies  1.19800e+03 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 4                  annual_fiscal_budget  2.14476e+06 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 5                 forensic_pathologists  3.00000e+00 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 6                        contract_cases  2.76000e+02 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 7                            population  9.23820e+05 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 8  pt_provisional_forensic_pathologists  1.00000e+00 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 9                             autopsies  1.03900e+03 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 10                 annual_fiscal_budget  2.03764e+06 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 11                forensic_pathologists  3.00000e+00 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 12                       contract_cases  2.40000e+02 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 13                           population  9.16292e+05 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 14 pt_provisional_forensic_pathologists  1.00000e+00 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 15                            autopsies  1.01600e+03 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 16                 annual_fiscal_budget  1.93932e+06 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 17                forensic_pathologists  3.00000e+00 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 18                       contract_cases  2.67000e+02 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 19                           population  9.11784e+05 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 20 pt_provisional_forensic_pathologists  1.00000e+00 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 21                            autopsies  9.21000e+02 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 22                 annual_fiscal_budget  2.05244e+06 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 23                forensic_pathologists  3.00000e+00 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 24                       contract_cases  2.48000e+02 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 25                           population  9.09858e+05 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 26 pt_provisional_forensic_pathologists  1.00000e+00 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 27                            autopsies  7.37000e+02 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 28                 annual_fiscal_budget  2.27608e+06 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 29                forensic_pathologists  3.00000e+00 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 30                       contract_cases  2.24000e+02 2008</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 31                           population  9.09247e+05 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 32 pt_provisional_forensic_pathologists  1.00000e+00 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 33                            autopsies  6.19000e+02 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 34                 annual_fiscal_budget  2.92444e+06 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 35                forensic_pathologists  3.00000e+00 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 36                       contract_cases  1.62000e+02 2009</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 37                           population  0.00000e+00 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 38 pt_provisional_forensic_pathologists  1.00000e+00 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 39                            autopsies  6.14000e+02 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 40                 annual_fiscal_budget  2.99839e+06 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 41                forensic_pathologists  3.00000e+00 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 42                       contract_cases  1.51000e+02 2010</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 43                        autopsy_ratio -1.26467e-01 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 44                     raw_autopsy_rate  7.07300e+00 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 45           autopsy_standard_deviation -3.50000e-01 2007</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 46                        autopsy_ratio  6.16924e-03 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 47                     raw_autopsy_rate  7.94270e+00 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 48           autopsy_standard_deviation  2.00000e-02 2006</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 49                        autopsy_ratio  6.33676e-02 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 50                     raw_autopsy_rate  8.16560e+00 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 51           autopsy_standard_deviation  1.70000e-01 2005</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 52                        autopsy_ratio  2.13259e-01 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 53                     raw_autopsy_rate  9.50710e+00 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 54           autopsy_standard_deviation  5.70000e-01 2004</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $geos</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   cached_slug coroner_system                created_at district    id   kind</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 erie-county           none 2011-05-04T12:22:56-04:00       NA 36029 county</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   medical_examiner_system        name note population postal_abbreviation</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1                  county Erie County   NA         NA                  NY</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>                  updated_at</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> 1 2011-05-04T12:24:57-04:00</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span class="co"># }</span></span>
 <span class="r-in"></span>
 </code></pre></div>
     </div>
