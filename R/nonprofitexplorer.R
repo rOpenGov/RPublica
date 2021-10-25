@@ -3,7 +3,7 @@
 #' Search for and retrieve nonprofit data
 #'
 #' @rdname nonprofitexplorer
-#'
+#' @concept nonprofitexplorer
 #' @param q A character string containing a search query.
 #'
 #' @param order A character string containing a field by which to order the
@@ -55,6 +55,7 @@ np_search <- function(q = NULL, order = NULL, sort = NULL, state = NULL, ntee = 
 }
 
 #' @rdname nonprofitexplorer
+#' @concept nonprofitexplorer
 #' @export
 np_org <- function(ein, ...) {
   out <- ppQuery(

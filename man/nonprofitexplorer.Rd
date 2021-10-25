@@ -73,3 +73,4 @@ np_org(142007220)
 \author{
 Thomas J. Leeper
 }
+\concept{nonprofitexplorer}

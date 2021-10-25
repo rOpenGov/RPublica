@@ -4,3 +4,14 @@ template:
   opengraph:
     twitter:
       site: '@rOpenGov'
+reference:
+- title: Nonprofit Explorer
+- contents: has_concept("nonprofitexplorer")
+- title: Forensics API
+- contents: forensics
+- title: Free the Files
+- contents: has_concept("freethefiles")
+- title: API Query
+- contents: ppQuery
+- title: About the package
+- contents: RPublica-package
