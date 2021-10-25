@@ -101,6 +101,16 @@
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
 <span class="fu">install_github</span><span class="op">(</span><span class="st">"rOpenGov/RPublica"</span><span class="op">)</span></code></pre></div>
+<p>Alternatively, you can install <code>RPublica</code> using the <a href="https://ropengov.r-universe.dev" class="external-link">r-universe</a>:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Enable this universe</span>
+<span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>
+  ropengov <span class="op">=</span> <span class="st">"https://ropengov.r-universe.dev"</span>,
+  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span>
+<span class="op">)</span><span class="op">)</span>
+
+
+<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"RPublica"</span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="using-the-package">Using the package<a class="anchor" aria-label="anchor" href="#using-the-package"></a>
@@ -109,7 +119,7 @@
 <h3 id="nonprofit-explorer">Nonprofit Explorer<a class="anchor" aria-label="anchor" href="#nonprofit-explorer"></a>
 </h3>
 <p>The <a href="https://projects.propublica.org/nonprofits/api" class="external-link">Nonprofit Explorer API</a> functionality includes two functions: <code>npsearch</code>, to retrieve subsets of available organizations, and <code>np_org</code> to retrieve detailed information about a given organization including a direct link to the complete Form 990 for that organization (as a PDF).</p>
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">"RPublica"</a></span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/nonprofitexplorer.html">np_search</a></span><span class="op">(</span><span class="st">"propublica"</span><span class="op">)</span>, max <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
 <span class="co">#&gt; List of 12</span>
@@ -137,7 +147,7 @@
 <h3 id="forensics-api">Forensics API<a class="anchor" aria-label="anchor" href="#forensics-api"></a>
 </h3>
 <p>The <a href="https://projects.propublica.org/forensics/api.html" class="external-link">Forensics API</a> functionality includes two functions: <code>geos</code>, to return data for a specific state, and <code>systems</code>, to return detailed data and statistics about specified medical examiner (or coroner) system.</p>
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">"RPublica"</a></span><span class="op">)</span>
 <span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/forensics.html">geos</a></span><span class="op">(</span><span class="op">)</span>
 
@@ -165,7 +175,7 @@
 <h3 id="free-the-files">Free the Files<a class="anchor" aria-label="anchor" href="#free-the-files"></a>
 </h3>
 <p>The <a href="https://projects.propublica.org/free-the-files/api" class="external-link">Free the Files API</a> functionality includes four functions: <code>market</code> (for retrieving available markets, or a specific market), <code>station</code> (for retrieving station-specific data<code>,</code>committee<code>(for retrieving sponsoring committees, or a specific such committee), and</code>filing` (for retrieving details of a specific filing). A codebook describing the values returned by each function is available at: <a href="https://projects.propublica.org/free-the-files/api" class="external-link uri">https://projects.propublica.org/free-the-files/api</a>.</p>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">"RPublica"</a></span><span class="op">)</span>
 <span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="fu"><a href="reference/market.html">market</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 33 x 5</span>
@@ -239,6 +249,7 @@
 <li><a href="https://CRAN.R-project.org/package=RPublica" class="external-link"><img src="http://www.r-pkg.org/badges/version/RPublica" alt="CRAN Version"></a></li>
 <li><a href="https://github.com/rOpenGov/RPublica/actions" class="external-link"><img src="https://github.com/rOpenGov/RPublica/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://app.codecov.io/gh/rOpenGov/RPublica" class="external-link"><img src="https://codecov.io/gh/rOpenGov/RPublica/branch/master/graph/badge.svg?token=44KsYrzbhv" alt="codecov"></a></li>
+<li><a href="https://ropengov.r-universe.dev/" class="external-link"><img src="https://ropengov.r-universe.dev/badges/RPublica" alt="r-universe"></a></li>
 </ul>
 </div>
 
