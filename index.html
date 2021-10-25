@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="Client for accessing data journalism APIs from ProPublica
-    &lt;http://www.propublica.org/&gt;.">
+    &lt;https://www.propublica.org/&gt;.">
 <title>ProPublica API Client • RPublica</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -15,14 +15,12 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="deps/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="deps/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="deps/bs3compat-0.3.1/transition.js"></script><script src="deps/bs3compat-0.3.1/tabs.js"></script><script src="deps/bs3compat-0.3.1/bs3compat.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link href="deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<link href="syntax-highlighting.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="ProPublica API Client">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="ProPublica API Client">
 <meta property="og:description" content="Client for accessing data journalism APIs from ProPublica
-    &lt;http://www.propublica.org/&gt;.">
+    &lt;https://www.propublica.org/&gt;.">
 <meta property="og:image" content="https://ropengov.github.io/RPublica/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@rOpenGov">
@@ -33,33 +31,37 @@
 <![endif]--><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=B612+Mono&amp;display=swap" rel="stylesheet">
-<!-- rogtemplate style sheet --><link href="rogtemplate.css" rel="stylesheet">
+<!-- rogtemplate style sheet --><link href="BS5/rogtemplate.css" rel="stylesheet">
 </head>
-<body data-spy="scroll" data-target="#toc" data-headroom>
+<body>
+    <a href="#container" class="visually-hidden-focusable">Skip to content</a>
     
 
-      <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
-    <a class="navbar-brand mb-0 h1" href="index.html">RPublica</a>
+    <nav class="navbar fixed-top navbar-dark navbar-expand-lg bg-dark"><div class="container">
+    <a class="navbar-brand me-2" href="index.html">RPublica</a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3.9000</small>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <button type="button" id="version-badge" class="badge badge-default d-none d-lg-block" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="">0.1.3</button>
-
-    <div id="navbar" class="collapse navbar-collapse">
-      <ul class="navbar-nav mr-auto ml-3">
+    <div id="navbar" class="collapse navbar-collapse ms-2">
+      <ul class="navbar-nav me-auto">
 <li class="nav-item">
   <a class="nav-link" href="reference/index.html">Reference</a>
 </li>
+<li class="nav-item">
+  <a class="nav-link" href="news/index.html">Changelog</a>
+</li>
       </ul>
 <form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control mr-sm-2" aria-label="Search" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search..." autocomplete="off">
+        <input type="search" class="form-control me-sm-2" aria-label="Search" name="search-input" data-search-index="search.json" id="search-input" placeholder="Search..." autocomplete="off">
 </form>
 
-      <ul class="navbar-nav ml-1">
+      <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="https://github.com/rOpenGov/RPublica/" aria-label="github">
+  <a class="external-link nav-link" href="https://github.com/rOpenGov/RPublica/" aria-label="github">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -67,186 +69,142 @@
       </ul>
 </div>
   </div>
-</nav><div class="container template-home">
+</nav><div class="container template-home" id="container">
 <div class="row">
   <div class="contents col-md-9">
-<img src="logo.png" class="pkg-logo" alt="" width="120"><div id="rpublica-" class="section level1">
-<div class="pb-2 mt-4 mb-2 border-bottom"><h1 class="hasAnchor">
-<a href="#rpublica-" class="anchor" aria-hidden="true"></a>RPublica 
+<img src="logo.png" class="pkg-logo" alt="" width="120"><div class="section level1">
+<div class="page-header pb-2 mt-4 mb-2 border-bottom"><h1 id="rpublica-">RPublica 
+<a class="anchor" aria-label="anchor" href="#rpublica-"></a>
 </h1></div>
 <!-- badges: start -->
 
-<div id="propublica-api-client" class="section level2">
-<h2 class="hasAnchor">
-<a href="#propublica-api-client" class="anchor" aria-hidden="true"></a>ProPublica API Client</h2>
-<p>The package is released under GPL-2 as part of the <a href="http://ropengov.github.io/" class="external-link">rOpenGov</a> project. Licenses for the data depend on the particular API, but access to that data (regardless of license) through the APIs is allowed under <a href="http://www.propublica.org/about/propublica-data-terms-of-use" class="external-link">ProPublica’s Data Terms of Use</a>.</p>
-<p>The package serves as a client library for the (currently) three <a href="http://www.propublica.org/" class="external-link">ProPublica</a> data journalism APIs:</p>
+<!-- badges: end -->
+<div class="section level2">
+<h2 id="propublica-api-client">ProPublica API Client<a class="anchor" aria-label="anchor" href="#propublica-api-client"></a>
+</h2>
+<p>The package is released under GPL-2 as part of the <a href="http://ropengov.github.io/" class="external-link">rOpenGov</a> project. Licenses for the data depend on the particular API, but access to that data (regardless of license) through the APIs is allowed under <a href="https://www.propublica.org/datastore/terms/" class="external-link">ProPublica’s Data Terms of Use</a>.</p>
+<p>The package serves as a client library for the (currently) three <a href="https://www.propublica.org/" class="external-link">ProPublica</a> data journalism APIs:</p>
 <ul>
-<li><p><a href="http://projects.propublica.org/nonprofits/api" class="external-link">Nonprofit Explorer</a>, which provides access to IRS Form 990 data on for every organization required to file a Form 990 (i.e., those claiming tax exempt status). These data are in the public domain.</p></li>
-<li><p><a href="http://projects.propublica.org/forensics/api" class="external-link">Forensics</a>, which provides state- and county-level data about coroner and medical examiner systems. These data are released under a modified Creative Commons license.</p></li>
+<li><p><a href="https://projects.propublica.org/nonprofits/api" class="external-link">Nonprofit Explorer</a>, which provides access to IRS Form 990 data on for every organization required to file a Form 990 (i.e., those claiming tax exempt status). These data are in the public domain.</p></li>
+<li><p><a href="https://projects.propublica.org/forensics/api.html" class="external-link">Forensics</a>, which provides state- and county-level data about coroner and medical examiner systems. These data are released under a modified Creative Commons license.</p></li>
 <li><p><a href="https://projects.propublica.org/free-the-files/api" class="external-link">Free the Files</a>, which provides access to political television spending data based on FCC filings in 33 swing markets. These data are released under a modified Creative Commons license.</p></li>
 </ul>
 </div>
-<div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
-<p><strong>RPublica</strong> is <a href="http://github.com/rOpenGov/RPublica" class="external-link">available on GitHub</a> and can (soon) be installed from within R from your favorite CRAN mirror:</p>
-<pre><code>install.packages("RPublica")</code></pre>
-<p>And the latest development version, available here, can be installed directly using <a href="http://cran.r-project.org/web/packages/devtools/index.html" class="external-link">devtools</a>:</p>
-<pre><code><a href="https://rdrr.io/r/base/library.html" class="external-link"># install.packages("devtools")
-library("devtools")
-install_github("rOpenGov/RPublica")</a></code></pre>
+<div class="section level2">
+<h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
+<p><strong>RPublica</strong> is <a href="https://github.com/rOpenGov/RPublica" class="external-link">available on GitHub</a> and can (soon) be installed from within R from your favorite CRAN mirror:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"RPublica"</span><span class="op">)</span></code></pre></div>
+<p>And the latest development version, available here, can be installed directly using <a href="https://CRAN.R-project.org/package=devtools" class="external-link">devtools</a>:</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+<span class="fu">install_github</span><span class="op">(</span><span class="st">"rOpenGov/RPublica"</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="using-the-package" class="section level2">
-<h2 class="hasAnchor">
-<a href="#using-the-package" class="anchor" aria-hidden="true"></a>Using the package</h2>
-<div id="nonprofit-explorer" class="section level3">
-<h3 class="hasAnchor">
-<a href="#nonprofit-explorer" class="anchor" aria-hidden="true"></a>Nonprofit Explorer</h3>
-<p>The <a href="http://projects.propublica.org/nonprofits/api" class="external-link">Nonprofit Explorer API</a> functionality includes two functions: <code>npsearch</code>, to retrieve subsets of available organizations, and <code>np_org</code> to retrieve detailed information about a given organization including a direct link to the complete Form 990 for that organization (as a PDF).</p>
+<div class="section level2">
+<h2 id="using-the-package">Using the package<a class="anchor" aria-label="anchor" href="#using-the-package"></a>
+</h2>
+<div class="section level3">
+<h3 id="nonprofit-explorer">Nonprofit Explorer<a class="anchor" aria-label="anchor" href="#nonprofit-explorer"></a>
+</h3>
+<p>The <a href="https://projects.propublica.org/nonprofits/api" class="external-link">Nonprofit Explorer API</a> functionality includes two functions: <code>npsearch</code>, to retrieve subsets of available organizations, and <code>np_org</code> to retrieve detailed information about a given organization including a direct link to the complete Form 990 for that organization (as a PDF).</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">'RPublica'</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/nonprofitexplorer.html">np_search</a></span><span class="op">(</span><span class="st">'propublica'</span><span class="op">)</span>, max<span class="op">=</span><span class="fl">1</span><span class="op">)</span></code></pre></div>
-<pre><code>## List of 14
-##  $ total_results : int 2
-##  $ filings       :'data.frame':  2 obs. of  101 variables:
-##   .. [list output truncated]
-##  $ num_pages     : int 1
-##  $ cur_page      : int 0
-##  $ page_offset   : int 0
-##  $ per_page      : int 25
-##  $ order         : NULL
-##  $ sort_order    : NULL
-##  $ search_query  : chr "propublica"
-##  $ selected_state: NULL
-##  $ selected_ntee : int 0
-##  $ selected_code : NULL
-##  $ data_source   : chr "ProPublica Nonprofit Explorer API: https://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Business Master Fi"| __truncated__
-##  $ api_version   : int 1</code></pre>
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/nonprofitexplorer.html">np_org</a></span><span class="op">(</span><span class="fl">142007220</span><span class="op">)</span>, max<span class="op">=</span><span class="fl">1</span><span class="op">)</span></code></pre></div>
-<pre><code>## List of 5
-##  $ organization        :List of 31
-##  $ filings_with_data   :'data.frame':    2 obs. of  68 variables:
-##  $ filings_without_data:'data.frame':    9 obs. of  5 variables:
-##  $ data_source         : chr "ProPublica Nonprofit Explorer API: https://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Business Master Fi"| __truncated__
-##  $ api_version         : int 1</code></pre>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">"RPublica"</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/nonprofitexplorer.html">np_search</a></span><span class="op">(</span><span class="st">"propublica"</span><span class="op">)</span>, max <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
+<span class="co">#&gt; List of 12</span>
+<span class="co">#&gt;  $ total_results : int 1</span>
+<span class="co">#&gt;  $ organizations :'data.frame':  1 obs. of  14 variables:</span>
+<span class="co">#&gt;  $ num_pages     : int 1</span>
+<span class="co">#&gt;  $ cur_page      : int 0</span>
+<span class="co">#&gt;  $ page_offset   : int 0</span>
+<span class="co">#&gt;  $ per_page      : int 100</span>
+<span class="co">#&gt;  $ search_query  : chr "propublica"</span>
+<span class="co">#&gt;  $ selected_state: NULL</span>
+<span class="co">#&gt;  $ selected_ntee : chr "NULL"</span>
+<span class="co">#&gt;  $ selected_code : NULL</span>
+<span class="co">#&gt;  $ data_source   : chr "ProPublica Nonprofit Explorer API: https://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Bu"| __truncated__</span>
+<span class="co">#&gt;  $ api_version   : int 2</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/nonprofitexplorer.html">np_org</a></span><span class="op">(</span><span class="fl">142007220</span><span class="op">)</span>, max <span class="op">=</span> <span class="fl">1</span><span class="op">)</span>
+<span class="co">#&gt; List of 5</span>
+<span class="co">#&gt;  $ organization        :List of 34</span>
+<span class="co">#&gt;  $ filings_with_data   :'data.frame':    9 obs. of  68 variables:</span>
+<span class="co">#&gt;  $ filings_without_data:'data.frame':    7 obs. of  5 variables:</span>
+<span class="co">#&gt;  $ data_source         : chr "ProPublica Nonprofit Explorer API: https://projects.propublica.org/nonprofits/api/\nIRS Exempt Organizations Bu"| __truncated__</span>
+<span class="co">#&gt;  $ api_version         : int 2</span></code></pre></div>
 </div>
-<div id="forensics-api" class="section level3">
-<h3 class="hasAnchor">
-<a href="#forensics-api" class="anchor" aria-hidden="true"></a>Forensics API</h3>
-<p>The <a href="http://projects.propublica.org/forensics/api" class="external-link">Forensics API</a> functionality includes two functions: <code>geos</code>, to return data for a specific state, and <code>systems</code>, to return detailed data and statistics about specified medical examiner (or coroner) system.</p>
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">'RPublica'</a></span><span class="op">)</span>
+<div class="section level3">
+<h3 id="forensics-api">Forensics API<a class="anchor" aria-label="anchor" href="#forensics-api"></a>
+</h3>
+<p>The <a href="https://projects.propublica.org/forensics/api.html" class="external-link">Forensics API</a> functionality includes two functions: <code>geos</code>, to return data for a specific state, and <code>systems</code>, to return detailed data and statistics about specified medical examiner (or coroner) system.</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">"RPublica"</a></span><span class="op">)</span>
 <span class="va">g</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/forensics.html">geos</a></span><span class="op">(</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">g</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span><span class="op">)</span></code></pre></div>
-<pre><code>## 'data.frame':    80 obs. of  5 variables:
-##  $ geo.ar_association_key_name: int  1 2 3 4 5 6 7 8 9 10 ...
-##  $ geo.cached_slug            : chr  "ak" "ar" "ct" "de" ...
-##  $ geo.coroner_system         : chr  "none" "county" "none" "none" ...
-##  $ geo.created_at             : chr  "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" "2011-05-04T12:22:11-04:00" ...
-##  $ geo.district               : logi  NA NA NA NA NA NA ...</code></pre>
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/forensics.html">geos</a></span><span class="op">(</span><span class="st">'ny'</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>## List of 1
-##  $ geo:List of 15
-##   ..$ cached_slug            : chr "ny"
-##   ..$ coroner_system         : chr "sometimes"
-##   ..$ created_at             : chr "2011-05-04T12:22:12-04:00"
-##   ..$ district               : NULL
-##   ..$ id                     : int 36
-##   ..$ kind                   : chr "state"
-##   ..$ medical_examiner_system: chr "sometimes"
-##   ..$ name                   : chr "New York"
-##   ..$ note                   : NULL
-##   ..$ population             : NULL
-##   ..$ postal_abbreviation    : chr "NY"
-##   ..$ updated_at             : chr "2011-05-04T12:25:11-04:00"
-##   ..$ system_types           :List of 2
-##   .. ..$ medical_examiner_system: chr "sometimes"
-##   .. ..$ coroner_system         : chr "sometimes"
-##   ..$ medical_examiners      : list()
-##   ..$ coroners               : list()</code></pre>
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/forensics.html">systems</a></span><span class="op">(</span><span class="fl">36</span><span class="op">)</span>, max<span class="op">=</span><span class="fl">1</span><span class="op">)</span></code></pre></div>
-<pre><code>## List of 18
-##  $ accreditation              : chr ""
-##  $ autopsies                  : NULL
-##  $ bc_forensic_pathologists   : int 22
-##  $ cached_slug                : NULL
-##  $ created_at                 : chr "2011-05-04T12:23:55-04:00"
-##  $ fellows                    : int 4
-##  $ forensic_pathologists      : NULL
-##  $ id                         : int 36
-##  $ name                       : chr "New York City Office of Chief Medical Examiner"
-##  $ note                       : chr "Not included in analysis of autopsy data. "
-##  $ pending                    : NULL
-##  $ pt_bc_forensic_pathologists: int 0
-##  $ pt_uc_forensic_pathologists: int 0
-##  $ uc_forensic_pathologists   : int 4
-##  $ updated_at                 : chr "2011-05-04T12:23:55-04:00"
-##  $ website                    : chr "http://www.nyc.gov/html/ocme/html/home/home.shtml"
-##  $ stats                      :'data.frame': 42 obs. of  3 variables:
-##  $ geos                       :'data.frame': 5 obs. of  12 variables:</code></pre>
+
+<span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="va">g</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 80 x 15</span>
+<span class="co">#&gt;    geo.ar_associat~ geo.cached_slug geo.coroner_sys~ geo.created_at geo.district</span>
+<span class="co">#&gt;               &lt;int&gt; &lt;chr&gt;           &lt;chr&gt;            &lt;chr&gt;          &lt;lgl&gt;       </span>
+<span class="co">#&gt;  1                1 ak              none             2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  2                2 ar              county           2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  3                3 ct              none             2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  4                4 de              none             2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  5                5 dc              none             2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  6                6 ky              county           2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  7                7 me              none             2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  8                8 md              none             2011-05-04T12~ NA          </span>
+<span class="co">#&gt;  9                9 ma              none             2011-05-04T12~ NA          </span>
+<span class="co">#&gt; 10               10 mt              county           2011-05-04T12~ NA          </span>
+<span class="co">#&gt; # ... with 70 more rows, and 10 more variables: geo.id &lt;int&gt;, geo.kind &lt;chr&gt;,</span>
+<span class="co">#&gt; #   geo.medical_examiner_system &lt;chr&gt;, geo.name &lt;chr&gt;, geo.note &lt;lgl&gt;,</span>
+<span class="co">#&gt; #   geo.population &lt;lgl&gt;, geo.postal_abbreviation &lt;chr&gt;, geo.updated_at &lt;chr&gt;,</span>
+<span class="co">#&gt; #   geo.system_types.medical_examiner_system &lt;chr&gt;,</span>
+<span class="co">#&gt; #   geo.system_types.coroner_system &lt;chr&gt;</span></code></pre></div>
 </div>
-<div id="free-the-files" class="section level3">
-<h3 class="hasAnchor">
-<a href="#free-the-files" class="anchor" aria-hidden="true"></a>Free the Files</h3>
+<div class="section level3">
+<h3 id="free-the-files">Free the Files<a class="anchor" aria-label="anchor" href="#free-the-files"></a>
+</h3>
 <p>The <a href="https://projects.propublica.org/free-the-files/api" class="external-link">Free the Files API</a> functionality includes four functions: <code>market</code> (for retrieving available markets, or a specific market), <code>station</code> (for retrieving station-specific data<code>,</code>committee<code>(for retrieving sponsoring committees, or a specific such committee), and</code>filing` (for retrieving details of a specific filing). A codebook describing the values returned by each function is available at: <a href="https://projects.propublica.org/free-the-files/api" class="external-link uri">https://projects.propublica.org/free-the-files/api</a>.</p>
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">'RPublica'</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/market.html">market</a></span><span class="op">(</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">]</span><span class="op">)</span></code></pre></div>
-<pre><code>## 'data.frame':    33 obs. of  5 variables:
-##  $ market.name          : chr  "NEW YORK" "PHILADELPHIA" "BOSTON (MANCHESTER)" "WASHINGTON DC (HAGRSTWN)" ...
-##  $ market.slug          : chr  "new-york" "philadelphia" "boston-manchester" "washington-dc-hagrstwn" ...
-##  $ market.titleized_name: chr  "New York" "Philadelphia" "Boston and Manchester, N.H." "Washington, D.C. and Hagerstown, Md." ...
-##  $ market.filings_ct    : int  475 718 1736 988 5 658 1331 2687 1429 565 ...
-##  $ market.freed_ct      : int  127 642 726 626 0 420 869 527 813 128 ...</code></pre>
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/market.html">market</a></span><span class="op">(</span><span class="st">'new-york'</span><span class="op">)</span>
-<span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/station.html">station</a></span><span class="op">(</span><span class="st">'WEWS-TV'</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/committees.html">committee</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>## 'data.frame':    1203 obs. of  4 variables:
-##  $ committee.gross_amt: chr  NA "221716606.25" "91778107" "57249945" ...
-##  $ committee.id       : int  4665 1221 1220 942 3959 3820 883 1170 907 1172 ...
-##  $ committee.name     : chr  "PLANNED PARENTHOOD/ ISSUE" "OBAMA FOR AMERICA" "ROMNEY FOR PRESIDENT" "AMERICAN CROSSROADS" ...
-##  $ committee.slug     : chr  "planned-parenthood-issue" "obama-for-america" "romney-for-president" "american-crossroads--2" ...</code></pre>
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">ofa</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/committees.html">committee</a></span><span class="op">(</span><span class="st">'obama-for-america'</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/filing.html">filing</a></span><span class="op">(</span><span class="fl">51212</span><span class="op">)</span><span class="op">)</span></code></pre></div>
-<pre><code>## List of 13
-##  $ callsign            : chr "WHP-TV"
-##  $ contract_number     : chr "69338"
-##  $ dc_slug             : chr "501618-69338-2-13519611148107-_-pdf"
-##  $ filing_type         : chr "Federal"
-##  $ gross_amount        : num 35940
-##  $ id                  : int 51212
-##  $ market_id           : int 41
-##  $ thumbnail_url       : chr "https://s3.amazonaws.com/s3.documentcloud.org/documents/501618/pages/69338-2-13519611148107-_-pdf-p1-thumbnail.gif"
-##  $ transcriptions_count: int 2
-##  $ upload_date         : chr "2012-11-03T00:00:00Z"
-##  $ url                 : chr "/collect/files/72313/Political File/2012/Federal/President/BARACK OBAMA/69338/69338-2 (13519611148107)_.pdf"
-##  $ committee           :List of 3
-##   ..$ id  : int 1221
-##   ..$ name: chr "OBAMA FOR AMERICA"
-##   ..$ slug: chr "obama-for-america"
-##  $ agency              :List of 1
-##   ..$ name: chr "GREER MARGOLIS MITCHELL"</code></pre>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st"><a href="https://github.com/rOpenGov/RPublica" class="external-link">"RPublica"</a></span><span class="op">)</span>
+<span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html" class="external-link">as_tibble</a></span><span class="op">(</span><span class="fu"><a href="reference/market.html">market</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; # A tibble: 33 x 5</span>
+<span class="co">#&gt;    market.name   market.slug  market.titleized~ market.filings_~ market.freed_ct</span>
+<span class="co">#&gt;    &lt;chr&gt;         &lt;chr&gt;        &lt;chr&gt;                        &lt;int&gt;           &lt;int&gt;</span>
+<span class="co">#&gt;  1 NEW YORK      new-york     New York                       475             127</span>
+<span class="co">#&gt;  2 PHILADELPHIA  philadelphia Philadelphia                   718             642</span>
+<span class="co">#&gt;  3 BOSTON (MANC~ boston-manc~ Boston and Manch~             1736             726</span>
+<span class="co">#&gt;  4 WASHINGTON D~ washington-~ Washington, D.C.~              988             626</span>
+<span class="co">#&gt;  5 ATLANTA       atlanta      Atlanta                          4               0</span>
+<span class="co">#&gt;  6 DETROIT       detroit      Detroit                        658             420</span>
+<span class="co">#&gt;  7 PHOENIX (PRE~ phoenix-pre~ Phoenix and Pres~             1331             869</span>
+<span class="co">#&gt;  8 TAMPA-ST. PE~ tampa-st-pe~ Tampa, St. Peter~             2687             527</span>
+<span class="co">#&gt;  9 MINNEAPOLIS-~ minneapolis~ Minneapolis-St. ~             1429             815</span>
+<span class="co">#&gt; 10 MIAMI-FT. LA~ miami-ft-la~ Miami and Ft. La~              564             129</span>
+<span class="co">#&gt; # ... with 23 more rows</span>
+
+<span class="va">m</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/market.html">market</a></span><span class="op">(</span><span class="st">"new-york"</span><span class="op">)</span>
+<span class="va">s</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/station.html">station</a></span><span class="op">(</span><span class="st">"WEWS-TV"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="fu"><a href="reference/committees.html">committee</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
+<span class="co">#&gt; 'data.frame':    1203 obs. of  4 variables:</span>
+<span class="co">#&gt;  $ committee.gross_amt: chr  NA "221983291.25" "91778107" "57249945" ...</span>
+<span class="co">#&gt;  $ committee.id       : int  4665 1221 1220 942 3959 3820 883 1170 907 1172 ...</span>
+<span class="co">#&gt;  $ committee.name     : chr  "PLANNED PARENTHOOD/ ISSUE" "OBAMA FOR AMERICA" "ROMNEY FOR PRESIDENT" "AMERICAN CROSSROADS" ...</span>
+<span class="co">#&gt;  $ committee.slug     : chr  "planned-parenthood-issue" "obama-for-america" "romney-for-president" "american-crossroads--2" ...</span></code></pre></div>
 </div>
 </div>
 </div>
   </div>
 
-  <div class="col-md-3 d-none d-md-block" id="pkgdown-sidebar">
-      <div class="sticky-top">
-        <div class="links">
+  <div class="col-md-3" id="pkgdown-sidebar">
+<div class="links">
 <h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=RPublica">https://​cloud.r-project.org/​package=RPublica</a>
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=RPublica" class="external-link">https://​cloud.r-project.org/​package=RPublica</a>
 </li>
-<li>Browse source code at <br><a href="https://github.com/rOpenGov/RPublica/">https://​github.com/​rOpenGov/​RPublica/​</a>
+<li>Browse source code at <br><a href="https://github.com/rOpenGov/RPublica/" class="external-link">https://​github.com/​rOpenGov/​RPublica/​</a>
 </li>
-<li>Report a bug at <br><a href="https://github.com/rOpenGov/RPublica/issues">https://​github.com/​rOpenGov/​RPublica/​issues</a>
+<li>Report a bug at <br><a href="https://github.com/rOpenGov/RPublica/issues" class="external-link">https://​github.com/​rOpenGov/​RPublica/​issues</a>
 </li>
 </ul>
 </div>
@@ -254,7 +212,7 @@ install_github("rOpenGov/RPublica")</a></code></pre>
 <div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.r-project.org/Licenses/GPL-2">GPL-2</a></li>
+<li><a href="https://www.r-project.org/Licenses/GPL-2" class="external-link">GPL-2</a></li>
 </ul>
 </div>
 
@@ -269,7 +227,7 @@ install_github("rOpenGov/RPublica")</a></code></pre>
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Thomas J. Leeper <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-4097-6326" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Thomas J. Leeper <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0003-4097-6326" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li><a href="authors.html">More on authors...</a></li>
 </ul>
 </div>
@@ -278,17 +236,17 @@ install_github("rOpenGov/RPublica")</a></code></pre>
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="http://ropengov.org/" class="external-link"><img src="https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg" alt="rOG-badge"></a></li>
-<li><a href="http://cran.r-project.org/package=RPublica" class="external-link"><img src="http://www.r-pkg.org/badges/version/RPublica" alt="CRAN Version"></a></li>
+<li><a href="https://CRAN.R-project.org/package=RPublica" class="external-link"><img src="http://www.r-pkg.org/badges/version/RPublica" alt="CRAN Version"></a></li>
 <li><a href="https://github.com/rOpenGov/RPublica/actions" class="external-link"><img src="https://github.com/rOpenGov/RPublica/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://app.codecov.io/gh/rOpenGov/RPublica" class="external-link"><img src="https://codecov.io/gh/rOpenGov/RPublica/branch/master/graph/badge.svg?token=44KsYrzbhv" alt="codecov"></a></li>
 </ul>
 </div>
 
-      </div>
   </div>
 </div>
 
 
-      <footer><div class="pkgdown-footer-left">
+    <footer><div class="pkgdown-footer-left">
   <p></p>
 <p>Developed by Thomas J. Leeper.</p>
 </div>
@@ -298,12 +256,12 @@ install_github("rOpenGov/RPublica")</a></code></pre>
 <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 1.9000.9000.9000.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
 
     <!-- Add ropengov logo -->
-  <script src="logo.js"></script>
+  <script src="BS5/logo.js"></script>
 </body>
 </html>
