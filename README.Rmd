@@ -1,78 +1,130 @@
-# RPublica <a href='https://ropengov.github.io/RPublica'><img src='man/figures/logo.png' align="right" height="139" /></a>
+---
+output: github_document
+editor_options: 
+  markdown: 
+    wrap: 80
+---
+
+# RPublica <a href='https://ropengov.github.io/RPublica/'><img src="man/figures/logo.png" align="right" height="139"/></a>
 
 <!-- badges: start -->
+
 [![rOG-badge](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](http://ropengov.org/)
-[![CRAN Version](http://www.r-pkg.org/badges/version/RPublica)](http://cran.r-project.org/package=RPublica)
-![Downloads](http://cranlogs.r-pkg.org/badges/RPublica)
-[![R build
+[![CRAN
+Version](http://www.r-pkg.org/badges/version/RPublica)](https://CRAN.R-project.org/package=RPublica)
+![Downloads](http://cranlogs.r-pkg.org/badges/RPublica) [![R build
 status](https://github.com/rOpenGov/RPublica/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/RPublica/actions)
+[![codecov](https://codecov.io/gh/rOpenGov/RPublica/branch/master/graph/badge.svg?token=44KsYrzbhv)](https://app.codecov.io/gh/rOpenGov/RPublica)
+
 <!-- badges: end -->
 
+```{r, include = FALSE}
+knitr::opts_knit$set(
+  progress = TRUE
+)
 
-## ProPublica API Client 
-
-The package is released under GPL-2 as part of the [rOpenGov](http://ropengov.github.io/) project. Licenses for the data depend on the particular API, but access to that data (regardless of license) through the APIs is allowed under [ProPublica's Data Terms of Use](http://www.propublica.org/about/propublica-data-terms-of-use).
-
-The package serves as a client library for the (currently) three [ProPublica](http://www.propublica.org/) data journalism APIs:
-
- - [Nonprofit Explorer](http://projects.propublica.org/nonprofits/api), which provides access to IRS Form 990 data on for every organization required to file a Form 990 (i.e., those claiming tax exempt status). These data are in the public domain.
-
- - [Forensics](http://projects.propublica.org/forensics/api), which provides state- and county-level data about coroner and medical examiner systems. These data are released under a modified Creative Commons license.
-
- - [Free the Files](https://projects.propublica.org/free-the-files/api), which provides access to political television spending data based on FCC filings in 33 swing markets. These data are released under a modified Creative Commons license.
-
-
-## Installation ##
-
-**RPublica** is [available on GitHub](http://github.com/rOpenGov/RPublica) and can (soon) be installed from within R from your favorite CRAN mirror:
-
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  tidy = "styler",
+  comment = "#>",
+  warning = FALSE,
+  message = FALSE,
+  dev = "ragg_png",
+  dpi = 300,
+  out.width = "100%"
+)
 ```
+
+## ProPublica API Client
+
+The package is released under GPL-2 as part of the
+[rOpenGov](http://ropengov.github.io/) project. Licenses for the data depend on
+the particular API, but access to that data (regardless of license) through the
+APIs is allowed under [ProPublica's Data Terms of
+Use](https://www.propublica.org/datastore/terms/).
+
+The package serves as a client library for the (currently) three
+[ProPublica](https://www.propublica.org/) data journalism APIs:
+
+-   [Nonprofit Explorer](https://projects.propublica.org/nonprofits/api), which
+    provides access to IRS Form 990 data on for every organization required to
+    file a Form 990 (i.e., those claiming tax exempt status). These data are in
+    the public domain.
+
+-   [Forensics](https://projects.propublica.org/forensics/api.html), which provides
+    state- and county-level data about coroner and medical examiner systems.
+    These data are released under a modified Creative Commons license.
+
+-   [Free the Files](https://projects.propublica.org/free-the-files/api), which
+    provides access to political television spending data based on FCC filings
+    in 33 swing markets. These data are released under a modified Creative
+    Commons license.
+
+## Installation
+
+**RPublica** is [available on GitHub](https://github.com/rOpenGov/RPublica) and
+can (soon) be installed from within R from your favorite CRAN mirror:
+
+```r 
+
 install.packages("RPublica")
-```
-
-And the latest development version, available here, can be installed directly using  [devtools](http://cran.r-project.org/web/packages/devtools/index.html):
 
 ```
+And the latest development version, available here, can be installed directly
+using [devtools](https://CRAN.R-project.org/package=devtools):
+
+```r
 # install.packages("devtools")
 library("devtools")
 install_github("rOpenGov/RPublica")
+
 ```
 
-## Using the package ##
+## Using the package
 
-### Nonprofit Explorer ###
+### Nonprofit Explorer
 
-The [Nonprofit Explorer API](http://projects.propublica.org/nonprofits/api) functionality includes two functions: `npsearch`, to retrieve subsets of available organizations, and `np_org` to retrieve detailed information about a given organization including a direct link to the complete Form 990 for that organization (as a PDF).
+The [Nonprofit Explorer API](https://projects.propublica.org/nonprofits/api)
+functionality includes two functions: `npsearch`, to retrieve subsets of
+available organizations, and `np_org` to retrieve detailed information about a
+given organization including a direct link to the complete Form 990 for that
+organization (as a PDF).
 
 ```{r eval=TRUE, echo=TRUE}
-library('RPublica')
-str(np_search('propublica'), max=1)
-str(np_org(142007220), max=1)
+library("RPublica")
+str(np_search("propublica"), max = 1)
+str(np_org(142007220), max = 1)
 ```
 
-### Forensics API ###
+### Forensics API
 
-The [Forensics API](http://projects.propublica.org/forensics/api) functionality includes two functions: `geos`, to return data for a specific state, and `systems`, to return detailed data and statistics about specified medical examiner (or coroner) system.
+The [Forensics API](https://projects.propublica.org/forensics/api.html) functionality
+includes two functions: `geos`, to return data for a specific state, and
+`systems`, to return detailed data and statistics about specified medical
+examiner (or coroner) system.
 
 ```{r eval=TRUE, echo=TRUE}
-library('RPublica')
+library("RPublica")
 g <- geos()
-str(g[1:5])
-str(geos('ny'))
-str(systems(36), max=1)
+
+tibble::as_tibble(g)
 ```
 
+### Free the Files
 
-### Free the Files ###
-
-The [Free the Files API](https://projects.propublica.org/free-the-files/api) functionality includes four functions: `market` (for retrieving available markets, or a specific market), `station` (for retrieving station-specific data`, `committee` (for retrieving sponsoring committees, or a specific such committee), and `filing` (for retrieving details of a specific filing). A codebook describing the values returned by each function is available at: https://projects.propublica.org/free-the-files/api.
+The [Free the Files API](https://projects.propublica.org/free-the-files/api)
+functionality includes four functions: `market` (for retrieving available
+markets, or a specific market), `station` (for retrieving station-specific
+data`,`committee`(for retrieving sponsoring committees, or a specific such committee), and`filing\`
+(for retrieving details of a specific filing). A codebook describing the values
+returned by each function is available at:
+<https://projects.propublica.org/free-the-files/api>.
 
 ```{r eval=TRUE, echo=TRUE}
-library('RPublica')
-str(market()[1:5])
-m <- market('new-york')
-s <- station('WEWS-TV')
+library("RPublica")
+tibble::as_tibble(market())
+
+m <- market("new-york")
+s <- station("WEWS-TV")
 str(committee())
-ofa <- committee('obama-for-america')
-str(filing(51212))
 ```
