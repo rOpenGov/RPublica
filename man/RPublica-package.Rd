@@ -25,6 +25,7 @@ Useful links:
 Other contributors:
 \itemize{
   \item Jeroen Ooms [contributor]
+  \item Diego Hernangómez (\href{https://orcid.org/0000-0001-8457-4658}{ORCID}) [contributor]
 }
 
 }

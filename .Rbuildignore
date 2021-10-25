@@ -6,3 +6,6 @@ README.Rmd
 ^_pkgdown\.yml$
 ^\.github$
 ^\._pkgdown\.yml$
+^revdep$
+^codemeta\.json$
+^CITATION\.cff$

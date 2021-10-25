@@ -19,7 +19,6 @@ associated arguments.}
 \item{...}{
   Arguments passed on to \code{\link[httr:GET]{httr::GET}}
   \describe{
-    \item{\code{url}}{the url of the page to retrieve}
     \item{\code{config}}{Additional configuration settings such as http
 authentication (\code{\link[httr:authenticate]{authenticate()}}), additional headers
 (\code{\link[httr:add_headers]{add_headers()}}), cookies (\code{\link[httr:set_cookies]{set_cookies()}}) etc.
@@ -42,7 +41,8 @@ Execute an API query
 \examples{
 \dontrun{
 geos <- ppQuery("geos",
-baseurl = "http://projects.propublica.org/forensics/")
+  baseurl = "http://projects.propublica.org/forensics/"
+)
 }
 
 }

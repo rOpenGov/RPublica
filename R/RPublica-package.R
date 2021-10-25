@@ -10,4 +10,6 @@ NULL
 
 # import stuffs
 #' @importFrom curl curl_escape
+#' @importFrom jsonlite fromJSON
+#' @importFrom httr GET content stop_for_status
 NULL
