@@ -9,6 +9,7 @@ Version](http://www.r-pkg.org/badges/version/RPublica)](https://CRAN.R-project.o
 ![Downloads](http://cranlogs.r-pkg.org/badges/RPublica) [![R build
 status](https://github.com/rOpenGov/RPublica/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/RPublica/actions)
 [![codecov](https://codecov.io/gh/rOpenGov/RPublica/branch/master/graph/badge.svg?token=44KsYrzbhv)](https://app.codecov.io/gh/rOpenGov/RPublica)
+[![r-universe](https://ropengov.r-universe.dev/badges/RPublica)](https://ropengov.r-universe.dev/)
 
 <!-- badges: end -->
 
@@ -57,6 +58,20 @@ directly using [devtools](https://CRAN.R-project.org/package=devtools):
 # install.packages("devtools")
 library("devtools")
 install_github("rOpenGov/RPublica")
+```
+
+Alternatively, you can install `RPublica` using the
+[r-universe](https://ropengov.r-universe.dev):
+
+``` r
+# Enable this universe
+options(repos = c(
+  ropengov = "https://ropengov.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
+
+
+install.packages("RPublica")
 ```
 
 ## Using the package
