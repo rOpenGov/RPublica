@@ -6,7 +6,8 @@
 [![rOG-badge](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](http://ropengov.org/)
 [![CRAN
 Version](http://www.r-pkg.org/badges/version/RPublica)](https://CRAN.R-project.org/package=RPublica)
-![Downloads](http://cranlogs.r-pkg.org/badges/RPublica) [![R build
+![Downloads](http://cranlogs.r-pkg.org/badges/RPublica) 
+[![R build
 status](https://github.com/rOpenGov/RPublica/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/RPublica/actions)
 [![codecov](https://codecov.io/gh/rOpenGov/RPublica/branch/master/graph/badge.svg?token=44KsYrzbhv)](https://app.codecov.io/gh/rOpenGov/RPublica)
 [![r-universe](https://ropengov.r-universe.dev/badges/RPublica)](https://ropengov.r-universe.dev/)
