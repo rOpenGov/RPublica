@@ -33,6 +33,7 @@ GitHub](https://github.com/rOpenGov/RPublica) and can (soon) be
 installed from within R from your favorite CRAN mirror:
 
 ``` r
+
 install.packages("RPublica")
 ```
 
@@ -40,6 +41,7 @@ And the latest development version, available here, can be installed
 directly using [devtools](https://CRAN.R-project.org/package=devtools):
 
 ``` r
+
 # install.packages("devtools")
 library("devtools")
 install_github("rOpenGov/RPublica")
@@ -49,6 +51,7 @@ Alternatively, you can install `RPublica` using the
 [r-universe](https://ropengov.r-universe.dev):
 
 ``` r
+
 # Enable this universe
 options(repos = c(
   ropengov = "https://ropengov.r-universe.dev",
@@ -71,6 +74,7 @@ given organization including a direct link to the complete Form 990 for
 that organization (as a PDF).
 
 ``` r
+
 library("RPublica")
 str(np_search("propublica"), max = 1)
 #> List of 12
@@ -103,6 +107,7 @@ specific state, and `systems`, to return detailed data and statistics
 about specified medical examiner (or coroner) system.
 
 ``` r
+
 library("RPublica")
 g <- geos()
 
@@ -139,6 +144,7 @@ values returned by each function is available at:
 <https://projects.propublica.org/free-the-files/api>.
 
 ``` r
+
 library("RPublica")
 tibble::as_tibble(market())
 #> # A tibble: 33 x 5
